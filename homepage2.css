@@ -216,11 +216,36 @@ button{
     bottom: -10%;
 }
 #heart-chunky_svg__eds-icon--user-chunky_svg{
-    
-    
-
     width:30px;
 }
+.heart-empty svg, .heart-full svg{
+    width:28px;
+}
+.heart-empty, .heart-full{
+    position: absolute;
+    bottom:0;
+    margin-bottom: 7px;
+    margin-left: 4px;
+}
+.heart-full{
+    display: none;
+    animation: popUp;
+    animation-duration: 0.5s;
+}
+@keyframes popUp{
+    0%{
+        transform: scale(1);
+        opacity: 0;
+    }
+    50%{
+        transform: scale(1.2);
+}
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 .select{
     padding-right:50px;
     color:rgb(50, 51, 61);

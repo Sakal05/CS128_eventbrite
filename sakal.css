@@ -1,13 +1,15 @@
+
 #container {
     border-color: black;
 }
 
 body {
+    margin: 0;
+    padding: 0;
     font-family: Neue Plak, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Tahoma, Arial, sans-serif;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     color: var(--eds-ui-800, #39364f);
-    margin-top: 0;
     background-color: transparent;
 }
 
@@ -17,13 +19,8 @@ div {
 
 #root {
     font-size: 16px;
-
 }
-
-
 .topnav {
-
-
     height: 60px;
     border-bottom: 1px solid #eeedf2;
     display: flex;
@@ -43,7 +40,6 @@ div {
     height: 100%;
     vertical-align: middle;
     width: fit-content;
-
     display: flex;
     align-content: center;
 
@@ -67,8 +63,6 @@ div {
     display: flex;
     height: 100%;
     -webkit-box-flex: 1;
-
-
     text-align: center;
     align-items: center;
 }
@@ -77,14 +71,12 @@ div {
     display: flex;
     -webkit-box-flex: 1;
     float: right;
-
     width: fit-content;
     text-align: center;
     align-items: center;
 }
 
-.logo-vector {
-
+.logo {
     align-items: center;
     float: left;
     padding: 0 24px;
@@ -94,9 +86,7 @@ div {
     /* display: inline-block; */
     margin: auto;
 }
-
 .search_bar {
-
     align-items: center;
     display: flex;
     float: left;
@@ -142,7 +132,6 @@ div {
     position: absolute;
     width: 100%;
     overflow: auto;
-
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -294,7 +283,6 @@ h3 {
 }
 
 .image_container_set {
-
     justify-content: space-between;
     -webkit-box-align: start;
     align-items: flex-start;
@@ -367,40 +355,32 @@ i {
 
 }
 
-.love_icon {
-    border-radius: 50%;
-    display: inline-block;
-    border: 1px solid var(--eds-ui-300, #dbdae3);
-    padding: 1px;
-
+.heart-empty svg, .heart-full svg{
+    width:28px;
 }
-
-.love_icon_button {
-    width: 40px;
-    background: none;
-    border: none;
-
+.heart-empty, .heart-full{
+    position: absolute;
+    bottom:0;
+    margin-bottom: 7px;
+    margin-left: 4px;
 }
-
-#heart-fill-svg {
-    color: var(--eds-primary-brand, #d1410c);
-    align-items: center;
-    vertical-align: middle;
-
-    fill: var(--eds-primary-brand, #d1410c);
+.heart-full{
+    display: none;
+    animation: popUp;
+    animation-duration: 0.5s;
 }
-
-#heart-align-svg {
-    align-items: center;
-    vertical-align: middle;
-
+@keyframes popUp{
+    0%{
+        transform: scale(1);
+        opacity: 0;
+    }
+    50%{
+        transform: scale(1.2);
 }
-
-.love_icon_align {
-    vertical-align: middle;
-    background-size: contain;
-    line-height: 0;
-
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .global_footer {
@@ -541,8 +521,7 @@ i {
 
 .bg_event_detail_img {
     height: 66vh;
-    max-height: inherit;
-    min-height: 500px;
+    width: 100%;
     overflow: hidden;
     position: absolute;
 
@@ -726,7 +705,7 @@ i {
 
 
 
-            /* Event Detail Page */
+/* Event Detail Page */
 
 .event_detail_layout {
     max-width: 1080px;
@@ -1305,4 +1284,106 @@ section {
     align-items: center;
     align-content: center;
     padding-left: 40%;
+}
+
+/* Online registration */
+
+#form{
+    background-color: rgba(57,54,79,.8);
+    width: 105vw;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popUp{
+
+}
+.block {
+    width:1000px;
+    height:750px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: white;
+}
+.head{
+    width:55%;
+    text-align: center;
+    float:left;
+    padding:20px 0px 20px 0px;
+    margin-left: 20px;
+}
+.head p:nth-child(1){
+    padding:5px;
+    margin:10px;
+    font-size: 20px;
+}
+.head small{
+    color:grey;
+    font-size: 15px;
+}
+.left{
+    text-align: left;
+    padding:8px;
+    margin:0;
+}
+.right{
+    float:right;
+}
+.img{
+    width:38%;
+    float:left;
+}
+.img img{
+    width:400px;
+}
+.cross{
+    width:2%;
+    float:left;
+}
+.cross svg{
+    padding-top:15px;
+    width:30px;
+}
+.sale{
+    width:60%;
+    margin-left: 20px;
+    margin-right: 20px;;
+    float:left;
+}
+.order-summary{
+    float:left;
+    width:30%;
+}
+.order-summary>div{
+    width:50%;
+    float:left;
+}
+.order-summary>div:nth-child(2){
+    padding-left: 60px;
+    margin-top: 38px;
+}
+#amount{
+    float:right;
+    margin-top:30px;
+    padding:10px 20px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+#country{
+    padding: 10px;
+    float:right;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+#submit{
+    margin-top: 230px;
+    padding:12px 30px;
+    color:white;
+    font-size: 14px;
+    background-color: orangered;
+    border: 1px solid orangered;
+    border-radius: 5px;
 }
