@@ -355,6 +355,9 @@ i {
 
 }
 
+.heart {
+    position: absolute;
+}
 .heart-empty svg, .heart-full svg{
     width:28px;
 }
