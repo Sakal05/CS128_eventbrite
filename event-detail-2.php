@@ -8,103 +8,23 @@
     <meta charset="UTF-8">
     <link rel="icon"
         href="https://cdn.evbstatic.com/s3-build/548393-rc2022-06-29_16.04-ea1b0bd/django/images/favicons/android-chrome-192x192.png">
-    <title>Event Detail-03</title>
+    <title>Event Detail-02</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="sakal.css" />
     <script src="https://kit.fontawesome.com/0e1ed34929.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-    <!-- testing -->
     <div id="root">
-        <div class="topnav">
-            <div class="left_topnav">
-                <div class="logo">
-                    <a href="homepage2.html">
-                        <svg width="110px" viewBox="0 0 200 36">
-                            <g fill="orangered" fill-rule="evenodd">
-                                <g>
-                                    <g transform="translate(.347)">
-                                        <path
-                                            d="M185.945 17.513c2.693-.61 5.381.495 6.878 2.584l-11.905 2.693c.411-2.52 2.333-4.668 5.027-5.277zm6.944 9.91a6.57 6.57 0 01-3.979 2.679c-2.711.614-5.417-.51-6.908-2.626l11.942-2.702 1.945-.44 3.719-.841a11.782 11.782 0 00-.31-2.372c-1.513-6.426-8.055-10.432-14.611-8.949-6.556 1.484-10.644 7.896-9.13 14.321 1.513 6.426 8.055 10.433 14.61 8.95 3.864-.875 6.869-3.46 8.377-6.751l-5.655-1.269z">
-                                        </path>
-                                        <path id="logo-wordmark-brand_svg__Fill-10"
-                                            d="M164.788 35.118V18.082h-3.677v-5.804h3.677V4.289h6.244v7.989h4.69v5.804h-4.69v17.036z">
-                                        </path>
-                                        <path
-                                            d="M152.86 35.118h6.03v-22.84h-6.03v22.84zm-.785-30.853c0-2.114 1.667-3.7 3.825-3.7 2.157 0 3.775 1.586 3.775 3.7 0 2.115-1.618 3.748-3.775 3.748-2.158 0-3.825-1.633-3.825-3.748zM150.76 12.342c-3.082.16-4.9.633-6.75 1.973v-2.037h-6.026v22.84h6.026v-11.2c0-3.524.86-5.529 6.75-5.726v-5.85zM117.16 24.057c.15 3.333 3.051 6.128 6.602 6.128 3.601 0 6.552-2.942 6.552-6.422 0-3.432-2.95-6.373-6.552-6.373-3.551 0-6.452 2.843-6.602 6.128v.539zm-5.88 11.061V1.38l6.03-1.364v13.962c1.863-1.49 4.07-2.115 6.472-2.115 6.864 0 12.355 5.286 12.355 11.918 0 6.583-5.491 11.965-12.355 11.965-2.403 0-4.609-.624-6.472-2.114v1.487h-6.03z">
-                                        </path>
-                                        <path id="logo-wordmark-brand_svg__Fill-1"
-                                            d="M98.445 35.118V17.965h-3.677v-5.687h3.677V4.283l6.244-1.413v9.408h4.69v5.687h-4.69v17.153z">
-                                        </path>
-                                        <path
-                                            d="M87.394 35.118V22.915c0-4.421-2.402-5.382-4.805-5.382-2.402 0-4.805.913-4.805 5.286v12.299h-6.03v-22.84h6.03v1.699c1.324-.961 2.942-2.115 6.13-2.115 5.098 0 9.51 2.932 9.51 10.092v13.164h-6.03zM56.484 17.513c2.694-.61 5.382.495 6.878 2.584L51.458 22.79c.41-2.52 2.332-4.668 5.026-5.277zm6.945 9.91a6.57 6.57 0 01-3.98 2.679c-2.711.614-5.416-.51-6.907-2.626l11.942-2.702 1.944-.44 3.72-.841a11.782 11.782 0 00-.31-2.372c-1.514-6.426-8.056-10.432-14.612-8.949-6.556 1.484-10.644 7.896-9.13 14.321 1.513 6.426 8.055 10.433 14.611 8.95 3.863-.875 6.868-3.46 8.376-6.751l-5.654-1.269z">
-                                        </path>
-                                        <path id="logo-wordmark-brand_svg__Fill-2"
-                                            d="M31.89 35.118l-9.364-22.84h6.57l5.932 15.49 5.982-15.49h6.57l-9.365 22.84z">
-                                        </path>
-                                        <path
-                                            d="M10.703 17.507c2.694-.61 5.382.495 6.878 2.584L5.677 22.785c.41-2.52 2.332-4.668 5.026-5.278zm6.945 9.91a6.57 6.57 0 01-3.98 2.68c-2.71.613-5.416-.51-6.907-2.626l11.942-2.702 1.945-.44 3.718-.842a11.782 11.782 0 00-.31-2.371c-1.513-6.426-8.055-10.433-14.61-8.95C2.888 13.65-1.2 20.063.314 26.489c1.514 6.426 8.055 10.432 14.611 8.949 3.864-.874 6.869-3.46 8.376-6.75l-5.654-1.27z">
-                                        </path>
-                                    </g>
-                                </g>
-                            </g>
-                        </svg>
-                    </a>
-                </div>
-                <div class="search_bar">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <div class="search_text">
-                        <a>Search for Event</a>
-                    </div>
-                </div>
-            </div>
-            <div class="right_topnav">
-                <div class="nav_text">
-                    <div class="nav_text_padding">
-
-                        <a href="" style="color: blue; text-decoration: none; ">Create an Event</a>
-                        <span class="nav-dropdown nav_text_padding">
-                            <a>Organizer</a>
-                            <i class="fa-solid fa-chevron-down"></i>
-                            <div class="dropdown-content">
-                                <a rel="noopener" target="_self" href="why-event-brite.html">Why Eventbrite</a>
-
-                            </div>
-                        </span>
-                        <span class="nav-dropdown nav_text_padding">
-                            <a>Help</a>
-                            <i class="fa-solid fa-chevron-down"></i>
-                            <div class="dropdown-content">
-                                <a rel="noopener" target="_self" href="find_your_tikets.html">Find your ticket</a>
-
-                            </div>
-                        </span>
-                        <span class="nav-dropdown nav_text_padding">
-
-                            <i class="fa-solid fa-user" style="padding-left: 20px;"></i>
-                            <a>Ssamnang@paragoniu.edu.kh</a>
-                            <div class="dropdown-content">
-                                <a rel="noopener" target="_self" href="">Manange my events</a>
-                                <a rel="noopener" target="_self" href="">Tickets (0)</a>
-                                <a rel="noopener" target="_self" href="">Credits</a>
-                                <a rel="noopener" target="_self" href="like-page.html">Liked</a>
-                                <a rel="noopener" target="_self" href="">Following</a>
-                                <a rel="noopener" target="_self" href="">Interest</a>
-                                <a rel="noopener" target="_self" href="">Account settings</a>
-                                <a rel="noopener" target="_self" href="login.html">Log out</a>
-                            </div>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <?php
+        include '/Applications/MAMP/htdocs/evenbrite 2/php/event-detail.php';
+        ?>
         <div>
             <div class="bg_event_detail_img">
                 <img
-                    src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F132627109%2F197361445633%2F1%2Foriginal.jpg?w=600&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=bb7a77861e0f0513eb9676c947ce6e84">
+                    src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F230834389%2F285623250502%2F1%2Foriginal.20210604-004626?w=600&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=f94e8cdbce75497cb7ede588ea34da22">
             </div>
         </div>
 
@@ -114,7 +34,7 @@
                     <div class="event_detail_img">
 
                         <img class="listing-image--main" width="600" height="300"
-                            src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F259490649%2F572555648333%2F1%2Foriginal.20220403-020557?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=290d6197492286f523db9f4f74e59942">
+                            src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F230834389%2F285623250502%2F1%2Foriginal.20210604-004626?w=600&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=f94e8cdbce75497cb7ede588ea34da22">
 
                     </div>
                     <div class="event_detail_main_title" style="background-color: rgb(240, 240, 240);">
@@ -168,26 +88,13 @@
                                         </svg>
                                     </button>
                                 </span>
-                                <div class="heart">
-                                    <div onclick="toggleLike(0)">
-                                        <div class="heart-empty" id="heart-empty-0">
-                                            <svg  id="heart-chunky_svg__eds-icon--user-chunky_svg" x="0" y="0" style="margin-top: 6px;"
-                                                viewBox="0 0 24 24" xml:space="preserve">
-                                                <path id="heart-chunky_svg__eds-icon--heart-chunky_base"
-                                                    fill="rgb(75, 77, 99)"  clip-rule="evenodd"
-                                                    d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z">
-                                                </path>
-                                            </svg>
-                                        </div>
-                                        <div class="heart-full" id="heart-full-0">
-                                            <svg id="heart-fill-svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
-                                                <path id="heart-align-svg" fill-rule="evenodd" clip-rule="evenodd" fill="red"
-                                                d="M16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.5-1.6 1.5-4.2 0-5.8C18.1 5.4 17 5 16 5">
-                                                </path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
+                                <button class="love_icon_button">
+                                    <svg id="heart-fill-svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
+                                        <path id="heart-align-svg" fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.5-1.6 1.5-4.2 0-5.8C18.1 5.4 17 5 16 5">
+                                        </path>
+                                    </svg>
+                                </button>
                             </div>
 
                             <div class="middle_side_bar">
@@ -196,7 +103,7 @@
                             </div>
 
                             <div class="right_side_bar">
-                                <button class="register_button" id="button-register">
+                                <button class="register_button">
                                     Register
                                 </button>
                             </div>
@@ -223,7 +130,11 @@
                                             safety! We are hosting ALL of our career fairs virtually until the public
                                             health officials and our own executive team determines it's safe enough to
                                             resume them in person. Here is a quick rundown:</p>
-                                        <ul style="display: block; line-height: 1.5rem; padding-left: 2em; color: #6f7287;">
+                                        <ul style="display: block;
+                                        
+                                        line-height: 1.5rem;
+                                        padding-left: 2em;
+                                        color: #6f7287;">
                                             <li>Career fair will be tentatively moved virtually/ to a later date, please
                                                 check the event description for updates or the following steps below to
                                                 get notified.</li>
@@ -242,7 +153,12 @@
                                             initiative with more diverse candidates&nbsp;to their talent pool. Available
                                             roles that our hiring companies are looking to fill are of the following:
                                         </p>
-                                        <ul style="display: block; line-height: 0.8rem; padding-left: 2em; color: #6f7287;">
+                                        <ul style="display: block;
+                                        
+                                        line-height: 0.8rem;
+                                        padding-left: 2em;
+                                        color: #6f7287;
+                                        ">
                                             <li>
                                                 <p>Software Engineering</p>
                                             </li>
@@ -526,164 +442,17 @@
         </div>
 
         <footer class="footer_detail_page">
-            <div class="footer_detail_page_layout">
-                <div class="footer_detail_content">
-                    <div class="footer_col1">
-                        <h3 class="footer_text_heading_h3">Use Eventbrite</h3>
-                        <ul style="list-style: none; padding:0 ;">
-
-
-                            <li><a href="https://www.eventbrite.com/organizer/overview/" class="text-body-small">How it
-                                    Works</a></li>
-                            <li><a href="https://www.eventbrite.com/organizer/pricing/"
-                                    class="text-body-small">Pricing</a></li>
-                            <li><a href="https://www.eventbrite.com/blog/" class="text-body-small">Event Blog</a></li>
-
-                        </ul>
-                    </div>
-                    <div class="footer_col2">
-                        <h3 class="footer_text_heading_h3">Use Eventbrite</h3>
-                        <ul style="list-style: none; padding:0 ;">
-
-                            <li><a href="https://www.eventbrite.com/l/registration-online/"
-                                    class="text-body-small">Online Registration</a></li>
-                            <li><a href="https://www.eventbrite.com/l/sell-tickets/" class="text-body-small">Sell Event
-                                    Tickets</a></li>
-                            <li><a href="https://www.eventbrite.com/l/event-management-software/"
-                                    class="text-body-small">Event Management Software</a></li>
-
-                        </ul>
-                    </div>
-                    <div class="footer_col3">
-                        <h3 class="footer_text_heading_h3">Use Eventbrite</h3>
-                        <ul style="list-style: none; padding:0 ;">
-                            <li>
-                                <a href="/d/ca--san-francisco/events/" class="text-body-small">Browse San Francisco
-                                    Events</a>
-                            </li>
-                            <li>
-                                <a href="/eventbriteapp/" class="text-body-small">Get the Eventbrite App</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer_col4">
-                        <h3 class="footer_text_heading_h3">Use Eventbrite</h3>
-                        <ul style="list-style: none; padding:0 ;">
-                            <li>
-
-                                <a title="Report This Event" href="" id="report_this_link--react"
-                                    class="text-body-small">Report This Event</a>
-
-                            </li>
-                            <li><a title="Help Center" class="text-body-small"
-                                    href="https://www.eventbrite.com/help/">Help <span
-                                        class="hide-small">Center</span></a></li>
-                            <li><a title="Terms" class="text-body-small"
-                                    href="https://www.eventbrite.com/tos/">Terms</a></li>
-                            <li><a title="Privacy" class="text-body-small"
-                                    href="https://www.eventbrite.com/privacypolicy/">Privacy</a></li>
-                            <li><a title="CA Privacy Notice" class="text-body-small"
-                                    href="https://www.eventbrite.com/support/articles/en_US/Troubleshooting/supplemental-privacy-notice-for-california-residents?lg=en_US">CA
-                                    Privacy Notice</a></li>
-                            <li>
-                                <a href="/l/accessibility" class="text-body-small">Accessibility</a>
-                            </li>
-                            <li><a title="Community GuidelinesCommunity Guidelines" class="text-body-small"
-                                    href="https://www.eventbrite.com/brite-community/">Community Guidelines</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="eventbrite_top_bar_footer">
-                <a href="https://www.eventbrite.com/r/ereg" class="secondary-footer__logo">
-                    <img src="image/eventbrite_secondary_logo.png" style="width: 300px;">
-                </a>
-            </div>
+        <?php
+        include '/Applications/MAMP/htdocs/evenbrite 2/php/event-detail-footer.php';
+        ?>
 
         </footer>
 
     </div>
-    <div id="form">
-        <div class="popUp">
-            <div class="block">
-                <div class="head">
-                    <p>Free Career Success & Meditation Class - Phnom Penh</p>
-                    <small>Tue, Jul 5, 2022 8:00 AM - 9:00 AM +07</small>
-                    <select id="amount" size="1">
-                        <option>1</option>
-                        <option>2</option>
-                    </select>
-                    <h3 class="left">RSVP</h3>
-                    <h4 class="left">Free</h4>
-                    <h4 class="left">Sales end on Jul 5, 2022</h4>
-                </div>
-                <div class="img">
-                    <img src="image1/1.png">
-                </div>
-                <div class="cross">
-                    <svg id="cross-chunky_svg__eds-icon--cross-chunky_svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve"
-                        aria-hidden="true">
-                        <path fill="grey" id="cross-chunky_svg__eds-icon--cross-chunky_base"
-                            d="M13.4 12l3.5-3.5-1.4-1.4-3.5 3.5-3.5-3.5-1.4 1.4 3.5 3.5-3.5 3.5 1.4 1.4 3.5-3.5 3.5 3.5 1.4-1.4z">
-                        </path>
-                    </svg>
-                </div>
-                <div class="sale">
-                    <hr size="1" color="lightgrey"><br><br>
-                    <select id="country">
-                        <option>Deutsch</option>
-                        <option>Deutsch(CH)</option>
-                        <option>English(CA)</option>
-                        <option>English(DK)</option>
-                        <option>English(FI)</option>
-                        <option>English(UK)</option>
-                        <option>English(US)</option>
-                        <option>Espanol(AR)</option>
-                        <option>Espanol(ES)</option>
-                        <option>Espanol(MX)</option>
-                        <option>Francais</option>
-                        <option>Francais(CA)</option>
-                        <option>Francais(CH)</option>
-                        <option>Italiano</option>
-                        <option>nederlands</option>
-                        <option>Portugues</option>
-                        <option>Portugues(BR)</option>
-                        <option>Svenska</option>
-                    </select>
-                    <p class="left">Powered by eventbrite</p>
-                </div>
-                <div class="order-summary">
-                    <div>
-                        <h3 class="left">Order summary</h3>
-                        <p class="left">1 x RSVP</p>
-                        <h3 class="left">Total</h3>
-                    </div>
-                    <div>
-                        <p class="left">0.00$</p>
-                        <h3 class="left">0.00$</h3>
-                    </div>
-                </div>
-                <!-- <a href="homepage2.html"> -->
-                    <center>
-                        <input type="submit" id="submit" value="Register">
-                    </center>
-                <!-- </a> -->
-            </div>
-        </div>
+
+
     </div>
-    <script src="./script/homepage.js"></script>
-    <script>
-        $(Document).ready(function(){
-            $("#form").hide();
-            $("#button-register").click(function(){
-                $("#form").show();
-            })
-            $(".cross").click(function(){
-                $("#form").hide();
-            })
-        })
-    </script>
+
 </body>
 
 </html>
