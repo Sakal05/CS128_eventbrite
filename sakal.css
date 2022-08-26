@@ -355,8 +355,16 @@ i {
 
 }
 
-.heart {
+.card_event_icon > .heart {
     position: absolute;
+    width: 30px;
+    height: auto;
+
+    right: -5px;
+    bottom: -10%;
+}
+#heart-chunky_svg__eds-icon--user-chunky_svg{
+    width:30px;
 }
 .heart-empty svg, .heart-full svg{
     width:28px;
