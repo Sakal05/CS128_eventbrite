@@ -3,11 +3,12 @@
 
 <head>
     <title>
-        Sign Up confirmation
+        Confirm Signup
     </title>
     <meta charset="utf-8">
     <meta name="viewpoint" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="signup2.css">
+    <link rel="icon" href="https://cdn.evbstatic.com/s3-build/548393-rc2022-06-29_16.04-ea1b0bd/django/images/favicons/android-chrome-192x192.png">
 </head>
 
 <body>
