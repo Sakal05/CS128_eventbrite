@@ -336,7 +336,7 @@ h3 {
 }
 
 .share_icon_button {
-    width: 40px;
+    width: 30px;
 
     background: none;
     border: none;
@@ -354,24 +354,19 @@ i {
     line-height: 0;
 
 }
-
-.card_event_icon > .heart {
+.image_container_set > .heart {
     position: absolute;
-    width: 30px;
+    width: 20%;
     height: auto;
-
     right: -5px;
     bottom: -10%;
 }
-#heart-chunky_svg__eds-icon--user-chunky_svg{
-    width:30px;
-}
 .heart-empty svg, .heart-full svg{
-    width:28px;
+    width:35px;
 }
 .heart-empty, .heart-full{
     position: absolute;
-    bottom:0;
+    top: -0.4;
     margin-bottom: 7px;
     margin-left: 4px;
 }
@@ -404,11 +399,7 @@ i {
     line-height: 22px;
     font-weight: 400;
     display: flex;
-
     vertical-align: middle;
-
-
-
 }
 
 .footer_layout {
