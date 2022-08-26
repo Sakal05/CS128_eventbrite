@@ -4,6 +4,7 @@
 }
 
 body {
+    
     margin: 0;
     padding: 0;
     font-family: Neue Plak, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Tahoma, Arial, sans-serif;
@@ -390,8 +391,8 @@ i {
 }
 
 .global_footer {
+    
     margin-top: 40px;
-
     margin-bottom: 0;
     padding-left: 24px;
     padding-right: 24px;
@@ -403,12 +404,10 @@ i {
 }
 
 .footer_layout {
-
+    width: 100%;
     color: #dbdae3;
     background: #1e0a3c;
-
     align-items: center;
-
 
 }
 
@@ -1301,9 +1300,7 @@ section {
     justify-content: center;
     align-items: center;
 }
-.popUp{
 
-}
 .block {
     width:1000px;
     height:750px;

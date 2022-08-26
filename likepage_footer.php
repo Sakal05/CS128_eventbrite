@@ -54,4 +54,5 @@ echo '<div class="global_footer ">
     </div>
 </div>
 
-</div>'?>
+</div>'
+?>

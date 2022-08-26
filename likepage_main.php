@@ -9,6 +9,7 @@
     <link rel="icon" href="https://cdn.evbstatic.com/s3-build/548393-rc2022-06-29_16.04-ea1b0bd/django/images/favicons/android-chrome-192x192.png">
     <title>Likes Page</title>
     <script src="https://kit.fontawesome.com/0e1ed34929.js" crossorigin="anonymous"></script>
+    <script src="./script/homepage.js"></script>
 </head>
 
 <body>
@@ -17,8 +18,8 @@
     //open database
     $servername = "localhost";
     $username = "root";
-    $password = "";
-    $dbname = "eventbrite_db";
+    $password = "root";
+    $dbname = "eventbrite";
 
     // open connection
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -33,18 +34,17 @@
     // }
 
     //Build quert SQL statement
-    $sql = "SELECT * from EVENT WHERE Like_status = 'Yes' ";
+    $sql = "SELECT * from EVENT WHERE Like_status = 'Yes'";
 
     //execute SQL
     $result = $conn->query($sql);
-
-
     ?>
-
-    <!-- event container -->
+    <div style="min-height: 90.5vh;">
+    <!-- header nav -->
     <div id="root">
         <?php include 'likepage_header.php' ?>
     </div>
+    <!-- body event_container  -->
     <div class="body_container">
         <div class="body_layout">
             <header class="user-page-header">
@@ -55,6 +55,7 @@
 
             <div class="events_container_widght">
                 <?php
+                $i = 0;
                 while ($row = mysqli_fetch_row($result)) {
                 ?>
                     <article class="event_card_list" href="event-detail-1.htm">
@@ -98,41 +99,42 @@
                                     </div>
                                 </span>
                                 <div class="heart">
-                                <span onclick="toggleLike(0)">
-                                    <div class="heart-empty" id="heart-empty-0">
-                                        <svg  id="heart-chunky_svg__eds-icon--user-chunky_svg" x="0" y="0" style="margin-top: -2px;"
-                                            viewBox="0 0 24 24" xml:space="preserve">
-                                            <path id="heart-chunky_svg__eds-icon--heart-chunky_base"
-                                                fill="rgb(75, 77, 99)"  clip-rule="evenodd"
-                                                d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                    <div class="heart-full" id="heart-full-0">
-                                        <svg id="heart-fill-svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
-                                            <path id="heart-align-svg" fill-rule="evenodd" clip-rule="evenodd" fill="red"
-                                            d="M16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.5-1.6 1.5-4.2 0-5.8C18.1 5.4 17 5 16 5">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                </span>
-                            </div>
+                                    <span onclick="toggleLike(<?php echo $i ?>)">
+                                        
+                                        <div class="heart-empty" id="heart-empty-<?php echo $i ?>">
+                                            <svg id="heart-chunky_svg__eds-icon--user-chunky_svg" x="0" y="0" style="margin-top: -2px;" viewBox="0 0 24 24" xml:space="preserve">
+                                                <path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill="rgb(75, 77, 99)" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <div class="heart-full" id="heart-full-<?php echo $i ?>">
+                                            <svg id="heart-fill-svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
+                                                <path id="heart-align-svg" fill-rule="evenodd" clip-rule="evenodd" fill="red" d="M16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.5-1.6 1.5-4.2 0-5.8C18.1 5.4 17 5 16 5">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </span>
+                                </div>
+
                             </div>
                         </div>
                     </article>
                 <?php
+                $i++;
                 }
                 ?>
             </div>
         </div>
 
     </div>
+    </div>
+    <!-- footer -->
 
     <footer class="footer_layout">
         <?php include 'likepage_footer.php' ?>
     </footer>
-    <script src="./script/homepage.js"></script>
 </body>
+
 
 </html>
 
