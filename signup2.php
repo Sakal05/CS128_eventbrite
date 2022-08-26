@@ -25,7 +25,7 @@
                         </div>
                         <form action ="php/connect.php" method="post">
                             <div class="login-form">
-                                <input type="text"  name="email" placehoder="Email Address">
+                                <input type="text"  name="email" placeholder="Email Address">
                             </div>
                             <br>
                             <div class="login-form">
@@ -44,7 +44,7 @@
                                 <input type="text"  name="password" placeholder="Password">
                             </div>
                         <div class="login-form">
-                            <input type="submit" name="btn" value="Signup" >
+                            <input type="button" name="btn" value="Signup" >
                         </div>
                         <div class="padding-bot"></div>
                         <div class="split-container__divider eds-l-pad-bot-6">
