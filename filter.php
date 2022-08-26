@@ -188,9 +188,9 @@
                 <div class="search-bar ">
                     <div class="search_bar_left h3_search_bar" style="display:flex;">
                         <i style="margin: 0; padding-left: 10px;" class="fa-solid fa-magnifying-glass"></i>
-
-                        <input style="padding-left: 10px; border: none; font-weight: 500" type="text" name="search" placeholder=" <?php echo $search ?>">
-
+                        
+                        <input style="padding-left: 10px; border: none; font-weight: 500" type="text" name="search" placeholder=" <?php echo $search ?>"  >
+                        
                     </div>
                     <div>
                         <button class="search_buttom" value="btn">
@@ -210,19 +210,19 @@
                             <a href="event-detail-1.htm">
                                 <h3>
 
-                                <?php echo $row[1] ?>
+                                    <?php echo $row[1] ?>
 
                                 </h3>
                             </a>
                             <div style="padding-bottom: 10px" class="event_card_sub_title">
                                 <a>
-                                <?php echo date("D \, M j H:i", strtotime($row[4])); ?>
+                                    <?php echo date("D \, M j H:i", strtotime($row[4])); ?>
                                 </a>
 
                             </div>
                             <div class="event_card_location_text">
                                 <a>
-                                <?php echo $row[7] ?>
+                                    <?php echo $row[7] ?>
                                 </a>
                             </div>
 
@@ -241,25 +241,22 @@
                                     </div>
                                 </span>
                                 <div class="heart">
-                                <button type="button" onclick="toggleLike(<?php echo $i ?>)">
-                                    <div class="heart-empty" id="heart-empty-<?php echo $i ?>">
-                                        <svg  id="heart-chunky_svg__eds-icon--user-chunky_svg" x="0" y="0" style="margin-top: 6px;"
-                                            viewBox="0 0 24 24" xml:space="preserve">
-                                            <path id="heart-chunky_svg__eds-icon--heart-chunky_base"
-                                                fill="rgb(75, 77, 99)"  clip-rule="evenodd"
-                                                d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                    <div class="heart-full" id="heart-full-<?php echo $i ?>">
-                                        <svg id="heart-fill-svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
-                                            <path id="heart-align-svg" fill-rule="evenodd" clip-rule="evenodd" fill="red"
-                                            d="M16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.5-1.6 1.5-4.2 0-5.8C18.1 5.4 17 5 16 5">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                </button>
-                            </div>
+                                    <span onclick="toggleLike(<?php echo $i ?>)">
+
+                                        <div class="heart-empty" id="heart-empty-<?php echo $i ?>">
+                                            <svg id="heart-chunky_svg__eds-icon--user-chunky_svg" x="0" y="0" style="margin-top: -2px;" viewBox="0 0 24 24" xml:space="preserve">
+                                                <path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill="rgb(75, 77, 99)" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <div class="heart-full" id="heart-full-<?php echo $i ?>">
+                                            <svg id="heart-fill-svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
+                                                <path id="heart-align-svg" fill-rule="evenodd" clip-rule="evenodd" fill="red" d="M16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.5-1.6 1.5-4.2 0-5.8C18.1 5.4 17 5 16 5">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </span>
+                                </div>
 
                             </div>
                         </div>
@@ -280,6 +277,6 @@
 
 </html>
 
-<?php 
+<?php
 $conn->close();
 ?>
