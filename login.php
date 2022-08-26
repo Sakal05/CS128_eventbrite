@@ -129,7 +129,7 @@
     <!--Footer-->
     <div class="footer-container">
         <?php
-            include 'footer.php';
+            include 'C:\wamp64\www\paragon\CS128_eventbrite\footer.php';
         ?>
     </div>
 </body>
