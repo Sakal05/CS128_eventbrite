@@ -74,7 +74,7 @@
     <!--Footer-->
     <div class="footer-container">
         <?php
-            include 'C:\wamp64\www\paragon\CS128_eventbrite\footer.php';
+            include 'footer.php';
         ?>
     </div>
 </body>
