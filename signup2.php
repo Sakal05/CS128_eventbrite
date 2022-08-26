@@ -44,7 +44,7 @@
                                 <input type="text" id="password" name="password" placeholder="Password">
                             </div>
                         <div class="login-form">
-                            <a href="homepage2.html"> <input type="button" value="Log In" id="login"></a>
+                            <a href="homepage2.html"> <input type="submit" name="btn" value="Signup" id="signup"></a>
                         </div>
                         <div class="padding-bot"></div>
                         <div class="split-container__divider eds-l-pad-bot-6">
