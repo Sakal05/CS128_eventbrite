@@ -18,12 +18,12 @@
     }else{
         echo "Connected successfully";
     }
-    $email = $_POST['email'];
-    $confirm_email = $_POST['email2'];
-    $firstName = $_POST['fname'];
-    $lastName = $_POST['lname'];
-    $password = $_POST['password'];
-    $btn = $_POST['btn'];
+    $email = $_POST["email"];
+    $confirm_email = $_POST["email2"];
+    $firstName = $_POST["fname"];
+    $lastName = $_POST["lname"];
+    $password = $_POST["password"];
+    $btn = $_POST["btn"];
 
 ?>   
 <!DOCTYPE html>
@@ -106,8 +106,8 @@
     if ($btn = "Signup")
     {
         //Build query
-        $sql = "INSERT INTO 'tbl_signup' ('id','email','confirm_email','firstName','lastName','password')
-        VALUE (NULL, '".$email ."', '".$confirm_email ."', '".$firstName ."', '".$lastName ."', '".$password ."');";
+        $sql = "INSERT INTO `singup` (`id`, `cos_email`, `cos_confirm_email`, `cos_firstname`, `cos_lastname`, `cos_password`) 
+        VALUES (NULL, '".$email."', '".$email2."', '".$firstName."', '".$lastName."', '".$password."');";
         if ($conn->query ($sql) === TRUE)
         {
             echo "<h1 style= 'color:white'>

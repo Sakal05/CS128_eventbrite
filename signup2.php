@@ -23,28 +23,28 @@
                         <div class="login">
                             <h1>Create an account</h1>
                         </div>
-                        <form action ="connect.php" method="post">
+                        <form action ="php/connect.php" method="post">
                             <div class="login-form">
-                                <input type="text" id="email" name="email" placeholder="Email Address">
+                                <input type="text"  name="email" placehoder="Email Address">
                             </div>
                             <br>
                             <div class="login-form">
-                                <input type="text" id="email2" name="email2" placeholder="Confirm Email">
+                                <input type="text"  name="email2" placeholder="Confirm Email">
                             </div>
                             <br>
                             <div class="login-form">
-                                <input type="text" id="fname" name="fname" placeholder="First Name">
+                                <input type="text"  name="fname" placeholder="First Name">
                             </div>
                             <br>
                             <div class="login-form">
-                                <input type="text" id="lastname" name="lname" placeholder="Last Name">
+                                <input type="text"  name="lname" placeholder="Last Name">
                             </div>
                             <br>
                             <div class="login-form">
-                                <input type="text" id="password" name="password" placeholder="Password">
+                                <input type="text"  name="password" placeholder="Password">
                             </div>
                         <div class="login-form">
-                            <a href="homepage2.html"> <input type="submit" name="btn" value="Signup" id="signup"></a>
+                            <input type="submit" name="btn" value="Signup" >
                         </div>
                         <div class="padding-bot"></div>
                         <div class="split-container__divider eds-l-pad-bot-6">
