@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="find_your_tickets.css">
+    <link rel="icon"
+        href="https://cdn.evbstatic.com/s3-build/548393-rc2022-06-29_16.04-ea1b0bd/django/images/favicons/android-chrome-192x192.png">
+    <title>Find ticket</title>
+</head>
+
+<body>
+    <nav>
+        <a href="homepage2.html">
+            <div class="logo">
+                <svg width="110px" viewBox="0 0 200 36">
+                    <g fill="orangered" fill-rule="evenodd">
+                        <g>
+                            <g transform="translate(.347)">
+                                <path
+                                    d="M185.945 17.513c2.693-.61 5.381.495 6.878 2.584l-11.905 2.693c.411-2.52 2.333-4.668 5.027-5.277zm6.944 9.91a6.57 6.57 0 01-3.979 2.679c-2.711.614-5.417-.51-6.908-2.626l11.942-2.702 1.945-.44 3.719-.841a11.782 11.782 0 00-.31-2.372c-1.513-6.426-8.055-10.432-14.611-8.949-6.556 1.484-10.644 7.896-9.13 14.321 1.513 6.426 8.055 10.433 14.61 8.95 3.864-.875 6.869-3.46 8.377-6.751l-5.655-1.269z">
+                                </path>
+                                <path id="logo-wordmark-brand_svg__Fill-10"
+                                    d="M164.788 35.118V18.082h-3.677v-5.804h3.677V4.289h6.244v7.989h4.69v5.804h-4.69v17.036z">
+                                </path>
+                                <path
+                                    d="M152.86 35.118h6.03v-22.84h-6.03v22.84zm-.785-30.853c0-2.114 1.667-3.7 3.825-3.7 2.157 0 3.775 1.586 3.775 3.7 0 2.115-1.618 3.748-3.775 3.748-2.158 0-3.825-1.633-3.825-3.748zM150.76 12.342c-3.082.16-4.9.633-6.75 1.973v-2.037h-6.026v22.84h6.026v-11.2c0-3.524.86-5.529 6.75-5.726v-5.85zM117.16 24.057c.15 3.333 3.051 6.128 6.602 6.128 3.601 0 6.552-2.942 6.552-6.422 0-3.432-2.95-6.373-6.552-6.373-3.551 0-6.452 2.843-6.602 6.128v.539zm-5.88 11.061V1.38l6.03-1.364v13.962c1.863-1.49 4.07-2.115 6.472-2.115 6.864 0 12.355 5.286 12.355 11.918 0 6.583-5.491 11.965-12.355 11.965-2.403 0-4.609-.624-6.472-2.114v1.487h-6.03z">
+                                </path>
+                                <path id="logo-wordmark-brand_svg__Fill-1"
+                                    d="M98.445 35.118V17.965h-3.677v-5.687h3.677V4.283l6.244-1.413v9.408h4.69v5.687h-4.69v17.153z">
+                                </path>
+                                <path
+                                    d="M87.394 35.118V22.915c0-4.421-2.402-5.382-4.805-5.382-2.402 0-4.805.913-4.805 5.286v12.299h-6.03v-22.84h6.03v1.699c1.324-.961 2.942-2.115 6.13-2.115 5.098 0 9.51 2.932 9.51 10.092v13.164h-6.03zM56.484 17.513c2.694-.61 5.382.495 6.878 2.584L51.458 22.79c.41-2.52 2.332-4.668 5.026-5.277zm6.945 9.91a6.57 6.57 0 01-3.98 2.679c-2.711.614-5.416-.51-6.907-2.626l11.942-2.702 1.944-.44 3.72-.841a11.782 11.782 0 00-.31-2.372c-1.514-6.426-8.056-10.432-14.612-8.949-6.556 1.484-10.644 7.896-9.13 14.321 1.513 6.426 8.055 10.433 14.611 8.95 3.863-.875 6.868-3.46 8.376-6.751l-5.654-1.269z">
+                                </path>
+                                <path id="logo-wordmark-brand_svg__Fill-2"
+                                    d="M31.89 35.118l-9.364-22.84h6.57l5.932 15.49 5.982-15.49h6.57l-9.365 22.84z">
+                                </path>
+                                <path
+                                    d="M10.703 17.507c2.694-.61 5.382.495 6.878 2.584L5.677 22.785c.41-2.52 2.332-4.668 5.026-5.278zm6.945 9.91a6.57 6.57 0 01-3.98 2.68c-2.71.613-5.416-.51-6.907-2.626l11.942-2.702 1.945-.44 3.718-.842a11.782 11.782 0 00-.31-2.371c-1.513-6.426-8.055-10.433-14.61-8.95C2.888 13.65-1.2 20.063.314 26.489c1.514 6.426 8.055 10.432 14.611 8.949 3.864-.874 6.869-3.46 8.376-6.75l-5.654-1.27z">
+                                </path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </a>
+        <div class="Help_Center">
+            <a href="#" class="top-nav">Help Center</a>
+        </div>
+        <div class="search">
+            <svg width="24px" id="magnifying-glass-chunky_svg__eds-icon--magnifying-glass-chunky_svg" x="0" y="0"
+                viewBox="0 0 24 24" xml:space="preserve">
+                <path id="magnifying-glass-chunky_svg__eds-icon--magnifying-glass-chunky_base" fill="grey"
+                    fill-rule="evenodd" clip-rule="evenodd"
+                    d="M10 14c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4 1.8 4 4 4zm3.5.9c-1 .7-2.2 1.1-3.5 1.1-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6c0 1.3-.4 2.5-1.1 3.4l5.1 5.1-1.5 1.5-5-5.1z">
+                </path>
+            </svg>
+        </div>
+        <div class="search_events">
+            <a href="#">Search help articles</a>
+        </div>
+        <div class="country">
+            <select>
+                <option value="es_AR" data-spec="select-option">United States</option>
+                <option value="es_AR" data-spec="select-option">Argentina</option>
+                <option value="en_AU" data-spec="select-option">Australia</option>
+                <option value="nl_BE" data-spec="select-option">België</option>
+                <option value="fr_BE" data-spec="select-option">Belgique</option>
+                <option value="pt_BR" data-spec="select-option">Brasil</option>
+                <option value="en_CA" data-spec="select-option">Canada (EN)</option>
+                <option value="fr_CA" data-spec="select-option">Canada (FR)</option>
+                <option value="es_CL" data-spec="select-option">Chile</option>
+                <option value="es_CO" data-spec="select-option">Colombia</option>
+                <option value="en_DK" data-spec="select-option">Denmark</option>
+                <option value="de_DE" data-spec="select-option">Deutschland</option>
+                <option value="es_ES" data-spec="select-option">España</option>
+                <option value="en_FI" data-spec="select-option">Finland</option>
+                <option value="fr_FR" data-spec="select-option">France</option>
+                <option value="en_HK" data-spec="select-option">Hong Kong</option>
+                <option value="en_IE" data-spec="select-option">Ireland</option>
+                <option value="it_IT" data-spec="select-option">Italia</option>
+                <option value="es_MX" data-spec="select-option">México</option>
+                <option value="nl_NL" data-spec="select-option">Nederland</option>
+                <option value="en_NZ" data-spec="select-option">New Zealand</option>
+                <option value="de_AT" data-spec="select-option">Österreich</option>
+                <option value="es_PE" data-spec="select-option">Perú</option>
+                <option value="pt_PT" data-spec="select-option">Portugal</option>
+                <option value="de_CH" data-spec="select-option">Schweiz</option>
+                <option value="en_SG" data-spec="select-option">Singapore</option>
+                <option value="fr_CH" data-spec="select-option">Suisse</option>
+                <option value="sv" data-spec="select-option">Sverige</option>
+                <option value="en_GB" data-spec="select-option">United Kingdom</option>
+            </select>
+        </div>
+    </nav>
+    <div class="heading">
+        <div class="content">
+            <h1>Find your tickets</h1>
+            <div class="e-logo">
+                <img src="image1/e-logo.jpg">
+            </div>
+            <p style="float:left; padding-left:20px;">Updated by Antwonna D</p>
+            <p style="float:left; padding-left:120px;"> Category: Attending an event</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="twenty">
+            <p>Here's how you do it:</p>
+            <a
+                href="https://www.eventbrite.com/support/articles/en_US/Troubleshooting/where-are-my-tickets?lg=en_US#01">Where
+                to find your tickets</a>
+            <br><br>
+            <a
+                href="https://www.eventbrite.com/support/articles/en_US/Troubleshooting/where-are-my-tickets?lg=en_US#02">What
+                information is included on your tickets</a>
+            <br><br>
+            <a
+                href="https://www.eventbrite.com/support/articles/en_US/Troubleshooting/where-are-my-tickets?lg=en_US#03">Why
+                tickets might be missing</a>
+            <br><br>
+            <a
+                href="https://www.eventbrite.com/support/articles/en_US/Troubleshooting/where-are-my-tickets?lg=en_US#04">What
+                to do if your tickets are missing</a>
+        </div>
+        <div class="eighty">
+            <p>When you order tickets on Eventbrite, a confirmation is sent to the email address you entered for the
+                order. This article will explain what information Eventbrite provides on your tickets, where to find
+                your tickets, and what to do if you can’t find them.</p>
+            <h2 class="h2">Where to find your tickets</h2>
+            <p><strong>Your email inbox:</strong>Search your inbox for an email from noreply@order.eventbrite.com</p>
+            <p><strong>Your Eventbrite account:</strong>When you register for an event, Eventbrite automatically creates
+                an account associated with your email address. Log in using the same email address and select “Tickets”
+                from the dropdown in your Eventbrite account. </p>
+            <p><strong>The Eventbrite app:</strong></p>
+            <ul>
+                <li>iPhone: Log in and tap the ‘Tickets’ icon.</li>
+                <li>Android: Log in and tap the ‘Profile’ icon. Then find your order and tap the ‘Tickets’ icon.</li>
+            </ul>
+            <h2 class="h2">What information is included on your tickets</h2>
+            <p>Eventbrite tickets include: </p>
+            <ul>
+                <li>Event name, date, and location </li>
+                <li>Your name, ticket type, and order number. </li>
+            </ul>
+            <p>Eventbrite tickets do <b>not</b> include: </p>
+            <ul>
+                <li>Specific event details</li>
+                <li>Links needed to view/attend online events. </li>
+            </ul>
+            <p>If you need information about an event or a link to join an online event, <b>contact the event
+                    organizer.</b></p>
+            <h2 class="h2">
+                Why tickets might be missing</h2>
+            <ul>
+                <li><b>Incorrect email address:</b>You’re logged into Eventbrite using a different email address than
+                    what you used to place the order or there’s a typo in the email address. </li>
+                <li><b>Email deliverability:</b> The confirmation was sent to your junk/spam folder or was unable to be
+                    delivered.</li>
+                <li><b>The organizer disabled PDF tickets: </b>The order appears in your account, but you get an error
+                    when you try to print tickets.</li>
+            </ul>
+            <h2 class="h2">What to do if your tickets are missing</h2>
+            <p><a href="https://www.eventbrite.com/support/articleredirect?anum=3275" style="color:blue">Contact the
+                    event organizer</a> to have them look up your order and resend your confirmation email.</p>
+            <div class="review">
+                <div class="text">
+                    <p>Did this article answer your question?</p>
+                </div>
+                <div class="smile">
+                    <img src="image1/smile.png">
+                </div>
+                <div class="sad">
+                    <img src="image1/sad-face-in-rounded-square.png">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="question">
+        <p>Still have questions? <a href="https://www.eventbrite.com/support/contact-us" style="color: blue;">Contact
+                us.</a></p>
+    </div>
+    <footer>
+        <div class="footer-space">
+            <div class="block_twentyfive">
+                <ul>
+                    <h4>Use Eventbrite</h4>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Content Standards</a></li>
+                    <li><a href="#">Taxes</a></li>
+                </ul>
+            </div>
+            <div class="block_twentyfive">
+                <ul>
+                    <h4>Resources</h4>
+                    <li><a href="#">Developer Site</a></li>
+                    <li><a href="#">Eventbrite Blog</a></li>
+                    <li><a href="#">Download the Eventbrite App for Android</a></li>
+                    <li><a href="#">Download the Eventbrite App for iOS</a></li>
+                    <li><a href="#">Download the Eventbrite Organizer app</a></li>
+                </ul>
+            </div>
+            <div class="block_twentyfive">
+                <ul>
+                    <h4>Web Status</h4>
+                    <li><a href="#">Status</a></li>
+            </div>
+            <div class="block_twentyfive">
+                <ul>
+                    <h4>About Us</h4>
+                    <li><a href="#">About Eventbrite</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Legal Terms</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="foot-text">
+            <p style="color:white">© 2022 Eventbrite. All Rights Reserved. Terms. Privacy Policy. California Privacy
+                Notice. Cookies.</p>
+        </div>
+        <div class="foot-logo">
+            <img src="image1/foot-logo.PNG" width="50px">
+        </div>
+    </footer>
+</body>
+
+</html>
