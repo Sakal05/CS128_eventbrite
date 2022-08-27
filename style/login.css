@@ -1,0 +1,128 @@
+.block-center{
+  width:100%;
+}
+.block-center>div{
+  width:50%;
+  float:left;
+}
+.logo svg{
+  width:200px;
+  fill:orangered;
+}
+.background-column img{
+  width:100%;
+}
+.form{
+  padding: 130px 230px;
+}
+.submit-form{
+  padding-left: 30px;
+}
+h1{
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 4rem;
+}
+.split-container {
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.split-container__divider {
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: flex;
+  padding:0px 140px;
+}
+.split-container__divider:before {
+  content: "";
+  height: 1px;
+  position: relative;
+  background-color: #a9a8b3;
+}
+.split-container__divider-text {
+  color: #6f7287;
+  border: 1px solid #a9a8b3;
+  border-radius: 100px;
+  padding: 0 12px 3px;
+  text-align: center;
+  margin: 20px;
+}
+.split-container__bg {
+  background-color: white;
+  background-position-x: 0px;
+  background-position-y: center;
+  background-color: #f8f7fa;
+  background-position: 0;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+}
+.login-form {
+    display: block;
+}
+.login{
+  padding:30px 0px 40px 0px;
+}
+#login{
+  margin-top: 20px;
+}
+input[type=text]{
+  font-size: 14px;
+  line-height: 22px;
+  min-height: 22px;
+  width: 360px;
+  padding: 10px 12px 10px;
+  display: inline-block;
+  border: 1px solid blue;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+input[type=button] {
+  width: 360px;
+  border-color: #d1410c;
+  background-color: #d1410c;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.Email-link {
+  font-size: 14px;
+  line-height: 24px;
+  height: 44px;
+  width: 360px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0px 30px 1px;
+  display: block;
+  border: 1px solid silver;
+  border-radius: 4px;
+  font-weight: 600;
+}
+.Email-link>div{
+  float:left;
+}
+.Email-link svg {
+  margin-top: 8px;
+}
+.sign-up{
+  display: flex;
+}
+.sign-up a:hover{
+  text-decoration: underline;
+}
+
+svg {
+  height: 24px;
+  overflow: hidden;
+}

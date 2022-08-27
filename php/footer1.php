@@ -2,7 +2,7 @@
     <div class="footer">
         <a href="#">© 2022 Eventbrite</a>
         <div class="links">
-            <a href="./why_us/">About Us</a>
+            <a href="../why_us/">About Us</a>
             <a href="#events-collection">Events</a>
             <a href="#">Account</a>
             <a href="#">Find Your Ticket</a>
