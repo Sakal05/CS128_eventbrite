@@ -47,7 +47,9 @@
                         <br>
                         <br>
                         <div class="login-form">
-                            <input type="button" name="btn" value="Create Account" id="signup">
+                            <a href="php/connect.php">
+                                <input type="button" name="btn" value="Create Account" id="signup">
+                            </a>   
                         </div>
                         <br>
                         <br>
