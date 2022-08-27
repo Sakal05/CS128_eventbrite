@@ -18,8 +18,8 @@
     //open database
     $servername = "localhost";
     $username = "root";
-    $password = "";
-    $dbname = "eventbrite_db";
+    $password = "root";
+    $dbname = "eventbrite";
 
     // open connection
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -34,7 +34,7 @@
     // }
 
     //Build quert SQL statement
-    $sql = "SELECT * FROM EVENT";
+    $sql = "SELECT * FROM event";
 
     //execute SQL
     $result = $conn->query($sql);
@@ -228,7 +228,7 @@
                             </button>
                         </div>
                     </div>
-                    <a href="./detail/event-detail-1.php"><h2><?php echo $row["1"] ?></h2></a>
+                    <a href="../detail/event-detail.php?id=<?php echo $row[0] ?>"><h2><?php echo $row["1"] ?></h2></a>
                     <h3><span class="orangered"><?php echo date("D \, M j H:i", strtotime($row["4"])); ?></span></h3>
                     <h3><span class="grey"><?php echo $row["7"] ?></span></h3>
                     <h3><span class="grey"><?php echo $row["11"] ?></span></h3>

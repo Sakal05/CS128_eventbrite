@@ -350,7 +350,6 @@ h3 {
 }
 
 .image_container_set {
-
     justify-content: space-between;
     -webkit-box-align: start;
     align-items: flex-start;
@@ -358,8 +357,8 @@ h3 {
     line-height: 22px;
     font-weight: 400;
     position: relative;
-   
-    
+    width: 100%;
+    left: 20%;
 
 
 }
@@ -403,8 +402,8 @@ h3 {
 
 }
 
-.share_icon_button {
-    width: 40px;
+.share_icon_button{
+    width: 10px !important; 
 
     background: none;
     border: none;
@@ -423,50 +422,47 @@ i {
 
 }
 
-.love_icon {
+.image-section > .heart {
     
-    display: inline-block;
-    padding-top: 4px;
-    align-items: center;
-    vertical-align: middle;
-    align-content: center;
-   
+    width: 20%;
+    height: 18px;
+    right: -5px;
+    bottom: -15%;
 }
-
-.love_icon_button {
-    
-    width: 40px;
-    background: none;
-    border: none;
-
+.heart-empty svg, .heart-full svg{
+    width:28px;
 }
-
-#heart-fill-svg {
-    
-    color: var(--eds-primary-brand, #d1410c);
-    align-items: center;
-    vertical-align: middle;
-
-    fill: black;
-}
-
-#heart-align-svg {
-    align-items: center;
-    vertical-align: middle;
+.heart-empty, .heart-full{
+    position: absolute;
+    bottom:0;
+    margin-bottom: 7px;
+    margin-left: 4px;
 
 }
-
-.love_icon_align {
-    vertical-align: middle;
-    background-size: contain;
-    line-height: 0;
-
+.heart-empty 
+{
+    display: block;
+}
+.heart-full{
+    display: none;
+    animation: popUp;
+    animation-duration: 0.5s;
+}
+@keyframes popUp{
+    0%{
+        transform: scale(1);
+        opacity: 0;
+    }
+    50%{
+        transform: scale(1.2);
+}
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* event card container end */
-
-
-
 
 
 .search{
@@ -524,3 +520,5 @@ select{
     margin-top: 15px;
     border:1px solid #1e0a3c;
 }
+
+
