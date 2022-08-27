@@ -47,10 +47,7 @@
                         <p style="font-size:16px; font-weight: 600;"> Other sign up methods</p>
                         <div class="other-method-logo">
                             <div>
-                                <img src="image1/Facebook_Logo_(2019).png.webp">
-                            </div>
-                            <div>
-                                <img src="image1/img_apple.png">
+                                <img src="image1/f_logo_RGB-Blue_1024.png">
                             </div>
                         </div>
                         <br>
