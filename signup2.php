@@ -24,33 +24,34 @@
                         <div class="login">
                             <h1>Create an account</h1>
                         </div>
-                        <form action ="connect.php" method="post">
-                            <div class="login-form">
-                                <input type="text"  name="email" placeholder="Email Address">
-                            </div>
+                        <form action="php/connect.php" method="post">
+                                <div class="login-form">
+                                    <input type="text"  name="email" placeholder="Email Address">
+                                </div>
+                                <br>
+                                <div class="login-form">
+                                    <input type="text"  name="con_email" placeholder="Confirm Email">
+                                </div>
+                                <br>
+                                <div class="login-form">
+                                    <input type="text"  name="fname" placeholder="First Name">
+                                </div>
+                                <br>
+                                <div class="login-form">
+                                    <input type="text"  name="lname" placeholder="Last Name">
+                                </div>
+                                <br>
+                                <div class="login-form">
+                                    <input type="text"  name="password" placeholder="Password">
+                                </div>
+                            <br>
                             <br>
                             <div class="login-form">
-                                <input type="text"  name="con_email" placeholder="Confirm Email">
+                                <input type="button" name="btn" value="Create Account" id="signup">
                             </div>
                             <br>
-                            <div class="login-form">
-                                <input type="text"  name="fname" placeholder="First Name">
-                            </div>
                             <br>
-                            <div class="login-form">
-                                <input type="text"  name="lname" placeholder="Last Name">
-                            </div>
-                            <br>
-                            <div class="login-form">
-                                <input type="text"  name="password" placeholder="Password">
-                            </div>
-                        <br>
-                        <br>
-                        <div class="login-form">
-                            <input type="button" name="btn" value="Create Account" id="signup">
-                        </div>
-                        <br>
-                        <br>
+                        </form>
                         <div class="log-in">
                             <a href="login.php">Log In</a>
                         </div>

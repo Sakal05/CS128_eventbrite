@@ -4,7 +4,7 @@
     $servername = "localhost";  // 192.168.0.2 // google.cloud.sg
     $username = "root";
     $password = "";
-    $dbname = "eventbrite_signup";
+    $dbname = "event_signup";
 
     //Database connection
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -18,11 +18,11 @@
     }else{
         echo "Connected successfully";
     }
-    $email = $_POST["email"];
-    $confirm_email = $_POST["con_email"];
-    $firstName = $_POST["fname"];
-    $lastName = $_POST["lname"];
-    $password = $_POST["password"];
+    $user_email = $_POST["email"];
+    $user_confirm = $_POST["con_email"];
+    $user_firstname = $_POST["fname"];
+    $user_lastname = $_POST["lname"];
+    $user_password = $_POST["password"];
     $btn = $_POST["btn"];
 
 ?>   
@@ -40,37 +40,38 @@
 
 <body>
     <?php 
-    if ($btn = "Signup")
+    if ($btn = "Create Account")
     {
-        //Build query
-        $sql = "INSERT INTO `singup` (`id`, `email`, `confirm_email`, `firstname`, `lastname`, `password`) 
-        VALUES (NULL, '".$email."', '".$confirm_email."', '".$firstName."', '".$lastName."', '".$password."');";
-        if ($conn->query ($sql) === TRUE)
-        {
-            echo "<h1 style= 'color:white'>
-            Registration is in progress...
-            </h1>";
-        }
-        else 
-        {
-            die ("ERROR");
-        }
-    }
-    else 
-    {
-        die("NOTHING");
-    }
+         // STEP #2  Build SQL statement 
+         $sql = "INSERT INTO `tbl_signup`(`user_id`, `user_email`, `user_confirm`, `user_firstname`, `user_lastname`, `user_password`) 
+         VALUES (NULL,'".$user_email."','".$user_confirm."','".$user_firstname."','".$user_lastname."','".$user_password."')";
+         echo $sql;
+        //$conn->query($sql);
+        if ($conn->query($sql) === TRUE) {  //Nothing error! Execute SQL successfully
+            echo "New record created successfully";
 
+        } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+
+    }
+    else { // Without click
+
+        die("Nothing..");
+    }
     ?>
-
+    
+    <!--Footer-->
     <div class="footer-container">
         <?php
             include 'php\footer.php';
         ?>
     </div>
-</body>
+    <!--/Footer-->
 
+</body>
 </html>
-<?php 
+<?php
+    //Close connection
     $conn->close();
 ?>
