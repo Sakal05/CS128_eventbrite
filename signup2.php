@@ -3,7 +3,7 @@
 
 <head>
     <title>
-        Confirm Signup
+        Eventbrite - Sign Up and Create Account
     </title>
     <meta charset="utf-8">
     <meta name="viewpoint" content="width=device-width, initial-scale=1">
