@@ -24,7 +24,7 @@
                         <div class="login">
                             <h1>Create an account</h1>
                         </div>
-                        <form action ="php/connect.php" method="post">
+                        <form action ="connect.php" method="post">
                             <div class="login-form">
                                 <input type="text"  name="email" placeholder="Email Address">
                             </div>
@@ -47,7 +47,7 @@
                         <br>
                         <br>
                         <div class="login-form">
-                            <input type="button" name="btn" value="Create Account" >
+                            <input type="button" name="btn" value="Create Account" id="signup">
                         </div>
                         <br>
                         <br>

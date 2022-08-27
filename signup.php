@@ -28,7 +28,7 @@
                         </div>
                         <br>
                         <div class="login-form">
-                            <a href="signup2.php"><input type="button" value="Continue" id="login"></a>
+                            <a href="signup2.php"><input type="button" value="Continue" id="signup"></a>
                         </div>
                         <div class="padding-bot"></div>
                         <div class="split-container__divider eds-l-pad-bot-6">
