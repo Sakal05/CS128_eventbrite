@@ -182,8 +182,6 @@ $row = mysqli_fetch_assoc($result)
                                             roles that our hiring companies are looking to fill are of the following:
                                         </p>
                                         <ul style="display: block;
-                                        
-                                        line-height: 0.8rem;
                                         padding-left: 2em;
                                         color: #6f7287;
                                         ">
@@ -333,7 +331,7 @@ $row = mysqli_fetch_assoc($result)
                                         <h3 style="font-size:inherit; font-weight:inherit">Date and Time</h3>
                                     </div>
                                     <div>
-                                        <time style="line-height: 5px;">
+                                        <time>
                                             <p>Fri, July 22, 2022</p>
                                             <p>9:00 AM – 12:00 PM PDT</p>
                                         </time>
@@ -350,7 +348,7 @@ $row = mysqli_fetch_assoc($result)
                                         <h3 style="font-size:inherit; font-weight:inherit">Location</h3>
                                     </div>
                                     <div>
-                                        <div style="line-height: 5px;">
+                                        <div>
                                             <p>Moved to Virtual Event</p>
                                             <p>Online</p>
                                             <p>San Francisco, CA 94013</p>
