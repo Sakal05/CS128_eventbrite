@@ -30,7 +30,7 @@
                             </div>
                             <br>
                             <div class="login-form">
-                                <input type="text"  name="email2" placeholder="Confirm Email">
+                                <input type="text"  name="con_email" placeholder="Confirm Email">
                             </div>
                             <br>
                             <div class="login-form">
