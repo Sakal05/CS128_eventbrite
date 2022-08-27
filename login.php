@@ -3,7 +3,7 @@
 
 <head>
     <title>
-        eventbrite.com/login/
+        Eventbrite - Log In and Sign In
     </title>
     <meta charset="utf-8">
     <meta name="viewpoint" content="width=device-width, initial-scale=1">
