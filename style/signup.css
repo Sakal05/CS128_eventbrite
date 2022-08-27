@@ -1,0 +1,89 @@
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 90vh;
+}
+
+.background{
+    background: url("https://cdn.evbstatic.com/s3-build/perm_001/8aa0b4/django/images/login/lateral-image-3-hd.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+}
+.login form{
+    display: flex;
+    flex-direction: column;
+}
+
+.login input{
+    padding: 0.6rem 0.5rem;
+    font-size: 1rem;
+    width: 350px;
+    border: 1px solid lightgrey;
+    box-shadow: none;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.login label{
+    margin-top: 1rem;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+.login h1{
+    margin-top: 0.8rem;
+    font-size: 3.5rem;
+    line-height: 1;
+}
+.login button{
+    margin-top: 1.2rem;
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    background-color: rgb(255, 68, 0);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    transition: 0.1s;
+    -webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -ms-transition: 0.1s;
+    -o-transition: 0.1s;
+}
+
+.login button:hover{
+    filter:brightness(0.9);
+    -webkit-filter:brightness(0.9);
+}
+
+.login form p{
+    margin-top: 0.5rem;
+    font-weight: lighter;
+}
+
+.login form span{
+    color: red;
+}
+
+#exist{
+    display: none;
+}
+
+.login .disabled{
+    cursor: progress;
+}
