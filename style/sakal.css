@@ -557,13 +557,10 @@ i {
 
 }
 
-.event_detail_date {
-    font-size: .9333333333rem;
-    line-height: 5px;
+.event_detail_date { 
+    font-size: .9333333333rem; 
     position: absolute;
     font-weight: 400;
-
-
     text-transform: uppercase;
 }
 
