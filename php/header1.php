@@ -7,7 +7,7 @@
             <div class="search-icon">
                 <svg id="magnifying-glass-chunky_svg__eds-icon--magnifying-glass-chunky_svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve" fill="rgb(170, 169, 169)"><path id="magnifying-glass-chunky_svg__eds-icon--magnifying-glass-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M10 14c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4 1.8 4 4 4zm3.5.9c-1 .7-2.2 1.1-3.5 1.1-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6c0 1.3-.4 2.5-1.1 3.4l5.1 5.1-1.5 1.5-5-5.1z"></path></svg>
             </div>
-            <a href="../search/filter.php">
+            <a href="../search/">
                 <p>
                     Search Events...
                 </p>

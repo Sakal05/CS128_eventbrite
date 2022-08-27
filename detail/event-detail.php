@@ -1,34 +1,34 @@
 <?php
-    error_reporting(0);
-    //open database
-    $servername = "localhost";
-    $username = "root";
-    $password = "root";
-    $dbname = "eventbrite";
+error_reporting(0);
+//open database
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "eventbrite";
 
-    // open connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
+// open connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-    // else {
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+// else {
 
-    //     echo "Connected successfully";
-    // }
-    
-    //All the parameters after ? can be accessed using $_GET array
-    
-    $id = $_GET['id'];
-    
-    //Build quert SQL statement
-    $sql = "SELECT * from EVENT WHERE Event_ID = $id";
+//     echo "Connected successfully";
+// }
 
-    //execute SQL
-    $result = $conn->query($sql);
-    $row = mysqli_fetch_assoc($result)
-    ?>
+//All the parameters after ? can be accessed using $_GET array
+
+$id = $_GET['id'];
+
+//Build quert SQL statement
+$sql = "SELECT * from EVENT WHERE Event_ID = $id";
+
+//execute SQL
+$result = $conn->query($sql);
+$row = mysqli_fetch_assoc($result)
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,19 +41,23 @@
     <title>Event Detail</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css file -->
     <link rel="stylesheet" href="../style/sakal.css" />
+    <link rel="stylesheet" href="../style/style.css" />
     <script src="https://kit.fontawesome.com/0e1ed34929.js" crossorigin="anonymous"></script>
     <script src="../script/homepage.js"></script>
 
 </head>
 
 <body>
-    
+    <nav>
+        <?php include '../php/header1.php' ?>
+    </nav>
     <div id="root">
 
         <div>
             <div class="bg_event_detail_img">
-                <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['Event_image']); ?>">
+                <img src="<?php echo $row['Event_image']; ?>">
             </div>
         </div>
 
@@ -62,7 +66,7 @@
                 <div class="title_container_group">
                     <div class="event_detail_img">
 
-                        <img class="listing-image--main" width="600" height="300" src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['Event_image']); ?>">
+                        <img class="listing-image--main" width="600" height="300" src="<?php echo $row['Event_image']; ?>">
 
                     </div>
                     <div class="event_detail_main_title" style="background-color: rgb(240, 240, 240);">
@@ -97,31 +101,31 @@
                         <div class="register_panel_alignment">
                             <div class="left_side_bar">
 
-                            <span class="share_icon">
-                                        <div class="share_icon_button">
-                                            <svg x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
-                                                <path id="share-ios-chunky_svg__eds-icon--share-ios-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M18 16v2H6v-2H4v4h16v-4z"></path>
-                                                <path id="share-ios-chunky_svg__eds-icon--share-ios-chunky_arrow" fill-rule="evenodd" clip-rule="evenodd" d="M12 4L7 9l1.4 1.4L11 7.8V16h2V7.8l2.6 2.6L17 9l-5-5z"></path>
+                                <span class="share_icon">
+                                    <div class="share_icon_button">
+                                        <svg x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
+                                            <path id="share-ios-chunky_svg__eds-icon--share-ios-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M18 16v2H6v-2H4v4h16v-4z"></path>
+                                            <path id="share-ios-chunky_svg__eds-icon--share-ios-chunky_arrow" fill-rule="evenodd" clip-rule="evenodd" d="M12 4L7 9l1.4 1.4L11 7.8V16h2V7.8l2.6 2.6L17 9l-5-5z"></path>
+                                        </svg>
+                                    </div>
+                                </span>
+                                <div class="heart">
+                                    <span onclick="toggleLike(0)">
+
+                                        <div class="heart-empty" id="heart-empty-0">
+                                            <svg id="heart-chunky_svg__eds-icon--user-chunky_svg" x="0" y="0" style="margin-top: -2px;" viewBox="0 0 24 24" xml:space="preserve">
+                                                <path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill="rgb(75, 77, 99)" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <div class="heart-full" id="heart-full-0">
+                                            <svg id="heart-fill-svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
+                                                <path id="heart-align-svg" fill-rule="evenodd" clip-rule="evenodd" fill="red" d="M16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.5-1.6 1.5-4.2 0-5.8C18.1 5.4 17 5 16 5">
+                                                </path>
                                             </svg>
                                         </div>
                                     </span>
-                                    <div class="heart">
-                                        <span onclick="toggleLike(0)">
-
-                                            <div class="heart-empty" id="heart-empty-0">
-                                                <svg id="heart-chunky_svg__eds-icon--user-chunky_svg" x="0" y="0" style="margin-top: -2px;" viewBox="0 0 24 24" xml:space="preserve">
-                                                    <path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill="rgb(75, 77, 99)" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                            <div class="heart-full" id="heart-full-0">
-                                                <svg id="heart-fill-svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
-                                                    <path id="heart-align-svg" fill-rule="evenodd" clip-rule="evenodd" fill="red" d="M16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.5-1.6 1.5-4.2 0-5.8C18.1 5.4 17 5 16 5">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                        </span>
-                                    </div>
+                                </div>
                             </div>
 
                             <div class="middle_side_bar">
@@ -440,11 +444,8 @@
 
         </div>
 
-        <footer class="footer_detail_page">
-            <?php
-            include '/Applications/MAMP/htdocs/evenbrite 2/php/event-detail-footer.php';
-            ?>
-
+        <footer class="footer">
+            <?php include '../php/footer1.php' ?>
         </footer>
 
     </div>
