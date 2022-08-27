@@ -1,29 +1,24 @@
-function toggleFollow(id) {
-    if(document.getElementById('status-' + id + '').className == "follow") {
-        console.log("trying to unfollow");
-        document.getElementById('status-' + id + '').classList.remove("follow");
-        document.getElementById('status-' + id + '').classList.add("not-follow");
+function toggleLike(id){
+    if (document.getElementById(`h-empty-${id}`).style.display == 'none'){
+        document.getElementById(`h-full-${id}`).style.display = 'none';
+        document.getElementById(`h-empty-${id}`).style.display = 'block';
         $.ajax({
             type : "POST",  //type of method
-            url  : "unlikeEvent.php",  //your page
+            url  : "../unlikeEvent.php",  //your page
             data : { id : id },// passing the values
-            success: function(res){  
-                
+            success: function(res){
             }
         });
-        alert("Unfollowed " + id);
     }
-    else if(document.getElementById('status-' + id + '').className == "not-follow"){
-        document.getElementById('status-' + id + '').classList.remove("not-follow");
-        document.getElementById('status-' + id + '').classList.add("follow");
+    else{
+        document.getElementById(`h-full-${id}`).style.display = 'block';
+        document.getElementById(`h-empty-${id}`).style.display = 'none';
         $.ajax({
             type : "POST",  //type of method
-            url  : "likeEvent.php",  //your page
+            url  : "../follow.php",  //your page
             data : { id : id },// passing the values
-            success: function(res){  
-                
+            success: function(res){
             }
         });
-        alert("followed " + id);
     }
 }
