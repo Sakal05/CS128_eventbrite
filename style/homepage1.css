@@ -164,7 +164,6 @@ a{
     height: 25px;
 }
 .events button .h-full{
-    display: none;
     animation: popUp;
     animation-duration: 0.5s;
 }

@@ -20,8 +20,8 @@
     //open database
     $servername = "localhost";
     $username = "root";
-    $password = "root";
-    $dbname = "eventbrite";
+    $password = "";
+    $dbname = "eventbrite_db";
 
     // open connection
     $conn = new mysqli($servername, $username, $password, $dbname);
