@@ -44,26 +44,15 @@
                             <div class="login-form">
                                 <input type="text"  name="password" placeholder="Password">
                             </div>
+                        <br>
+                        <br>
                         <div class="login-form">
-                            <input type="button" name="btn" value="Signup" >
+                            <input type="button" name="btn" value="Create Account" >
                         </div>
-                        <div class="padding-bot"></div>
-                        <div class="split-container__divider eds-l-pad-bot-6">
-                            <div class="split-container__divider-text eds-text-bm eds-text-weight--heavy">or</div>
-                        </div>
-                        <div class="Email-link" style="text-align: center;" id="email3">
-                            Email me a login link
-                        </div>
-                        <div class="other-method-logo">
-                            <div>
-                                <img src="image1/Facebook_Logo_(2019).png.webp">
-                            </div>
-                            <div>
-                                <img src="image1/img_apple.png">
-                            </div>
-                        </div>
+                        <br>
+                        <br>
                         <div class="log-in">
-                            <a href="login.html">Log In</a>
+                            <a href="login.php">Log In</a>
                         </div>
                     </div>
                 </div>

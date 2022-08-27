@@ -28,7 +28,7 @@
                         </div>
                         <br>
                         <div class="login-form">
-                            <a href="signup2.html"><input type="button" value="Continue" id="login"></a>
+                            <a href="signup2.php"><input type="button" value="Continue" id="login"></a>
                         </div>
                         <div class="padding-bot"></div>
                         <div class="split-container__divider eds-l-pad-bot-6">
@@ -49,13 +49,10 @@
                             <div>
                                 <img src="image1/Facebook_Logo_(2019).png.webp">
                             </div>
-                            <div>
-                                <img src="image1/img_apple.png">
-                            </div>
                         </div>
                         <br>
                         <div class="log-in">
-                            <a href="signup2.html"> Log In</a>
+                            <a href="login.php"> Log In</a>
                         </div>
                     </div>
                 </div>

@@ -114,7 +114,7 @@
                         </div>
                         <br>
                         <div class="sign-up">
-                            <a href="signup2.html"> Sign Up</a>
+                            <a href="signup.php"> Sign Up</a>
                         </div>
                     </div>
                 </div>
