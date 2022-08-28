@@ -65,9 +65,7 @@ $row = mysqli_fetch_assoc($result)
             <div class="event_detail_content">
                 <div class="title_container_group">
                     <div class="event_detail_img">
-
                         <img class="listing-image--main" width="600" height="300" src="<?php echo $row['Event_image']; ?>">
-
                     </div>
                     <div class="event_detail_main_title" style="background-color: rgb(240, 240, 240);">
                         <div class="event_detail_content">
@@ -162,7 +160,6 @@ $row = mysqli_fetch_assoc($result)
                                             health officials and our own executive team determines it's safe enough to
                                             resume them in person. Here is a quick rundown:</p>
                                         <ul style="display: block;
-                                        
                                         line-height: 1.5rem;
                                         padding-left: 2em;
                                         color: #6f7287;">

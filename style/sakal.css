@@ -316,7 +316,7 @@ i {
     font-size: 28px;
     line-height: 38px;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 40px;
     padding-bottom: 60px;
     font-weight: 600;
 
@@ -336,7 +336,6 @@ i {
 .bg_event_detail_img img {
     filter: blur(50px) brightness(.9);
     display: inline-block;
-
     width: 100%;
     position: relative;
 
@@ -354,15 +353,12 @@ i {
 
     color: #fff;
     flex-direction: column;
-    
     background: #f05537;
     background-color: #d1410c;
     transform: translateZ(0);
-    width: 130px;
-    height: 30px;
-    
+    width: 300px;
+    height: 60px;
     padding: 15px 30px;
-
     text-align: center;
     text-decoration: none;
     line-height: 24px;
@@ -371,7 +367,7 @@ i {
     border-radius: 4px;
     cursor: pointer;
     transition: all .4s cubic-bezier(0.4, 0, 0.3, 1);
-    
+    margin-bottom: 50px;
     font-family: 'Neue Plak Text', sans-serif;
     font-size: 16px;
     vertical-align: middle;
