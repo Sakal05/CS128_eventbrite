@@ -71,7 +71,7 @@
                         </a>
                         <br>
                         <div class="sign-up">
-                            <p>Don't have an account yet? <a href="../signup/">Sign Up</a> </p>
+                            <p>Don't have an account yet? <br><a href="../signup/">Sign Up</a> </p>
                         </div>
                     </div>
                 </div>
