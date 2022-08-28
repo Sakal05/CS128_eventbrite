@@ -32,8 +32,9 @@
                     <input id="name" type="text" placeholder="Full name">
                     <label>Password</label>
                     <input id="password" type="text" placeholder="Password">
-                    <p>Already have an account? <a href="../login/">Log In</a></p>
+                    <p>Your password must be at least 8 characters</p>
                     <button id="register-btn">Create account</button>
+                    <p>Already have an account? <a href="../login/">Log In</a></p>
                 </form>
             </div>
         </div>
