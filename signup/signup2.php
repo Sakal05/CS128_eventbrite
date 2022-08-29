@@ -18,21 +18,21 @@ if ($conn->connect_error) {
 //     echo "Connected successfully";
 // }
 $email = $_POST["email"];
-$email_confirm = $_POST["confirm"]; //no need for now
+// $email_confirm = $_POST["confirm"]; //no need for now
 $fullname = $_POST["name"];
 $password = $_POST["password"];
 $btn = $_POST["btn"];
 
     // Build query
     if ($btn == "Send") {
-        $sql = "INSERT INTO `user`(`User_ID`, `Username`, `Email`, `Password`) VALUES ('','.$email.','.$fullname.','.$password.');";
+        $sql = "INSERT INTO `user`(`User_ID`, `Username`, `Email`, `Password`) VALUES (NULL,'".$fullname."','".$email."','".$password."');";
     //execute SQL statement
     $conn->query($sql);
     }
 
     
     echo '<script>alert("Create Successfully!")</script>';
-    header("refresh:0.5; url=../"); 
+    header("refresh:0.5; url=../homepage?email=$email "); 
 ?>
 <!DOCTYPE html>
 <html>
@@ -77,13 +77,13 @@ $btn = $_POST["btn"];
                 <h1>Create<br>an account</h1>
                 <form >
                     <label>Email address</label>
-                    <input id="login-email" type="text" name="user_email" placeholder="example@gmail.com">
+                    <input id="login-email" type="text"  placeholder="example@gmail.com">
                     <label>Confirm Email</label>
-                    <input id="confirm-email" type="text" name="user_confirm" placeholder="example@gmail.com">
+                    <input id="confirm-email" type="text" placeholder="example@gmail.com">
                     <label>Name</label>
-                    <input id="name" type="text" name="fullname" placeholder="Full name">
+                    <input id="name" type="text" placeholder="Full name">
                     <label>Password</label>
-                    <input id="password" name="user_password" type="text" placeholder="Password">
+                    <input id="password" type="text" placeholder="Password">
                     <p>Your password must be at least 8 characters</p>
                     
                     <button id="register-btn" name="btn" value="Send" >Create account</button>
