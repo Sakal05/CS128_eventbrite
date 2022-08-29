@@ -150,11 +150,12 @@ h3 {
 }
 
 .share_icon_button{
-    width: 30px !important; 
     background: none;
     border: none;
 }
-
+.heart{
+    padding-bottom: -20px;
+}
 i {
     font-style: italic;
     margin: 0 auto;
@@ -167,9 +168,7 @@ i {
     line-height: 0;
 
 }
-.heart{
-    margin-top: 20px;
-}
+
 .image-section > .heart {
     
     width: 20%;
@@ -184,7 +183,7 @@ i {
     position: absolute;
     bottom:0;
     margin-left: 4px;
-
+    margin-bottom: -7px;
 }
 .heart-empty 
 {
