@@ -62,7 +62,7 @@
                     ?>
                         <article class="event_card_list" href="event-detail-1.htm">
                             <div class="event_card_content remove_style">
-                                <a href="../detail/event-detail.php?id=<?php echo $row[0] ?>">
+                                <a href="../detail/event-detail.php?id=<?php echo $row['Event_ID'] ?>">
                                     <h3>
                                         <!-- Tech Career Fair: Exclusive Tech Hiring Event -->
                                         <?php echo $row['Event_title'] ?>
