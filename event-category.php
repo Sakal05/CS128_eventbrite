@@ -63,7 +63,7 @@ FROM
                     </svg>
                 </div>
                 <div class="twenty">
-                    <a href="./event-category/?cid=1&cat=Music">Music</a>
+                    <a href="event-category.php?cid=1&cat=Music">Music</a>
                 </div>
                 <div class="five">
                     <i class="eds-vector-image1 eds-icon--small eds-vector-image1--ui-orange" data-spec="icon"
@@ -76,7 +76,7 @@ FROM
                         </svg></i>
                 </div>
                 <div class="twenty">
-                    <a href="./event-category/?cid=2&cat=Workshop">Workshop</a>
+                    <a href="event-category.php?cid=2&cat=Workshop">Workshop</a>
                 </div>
                 <div class="five">
                     <svg id="game_svg__eds-icon--game_svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
@@ -92,7 +92,7 @@ FROM
                     </svg>
                 </div>
                 <div class="twenty">
-                    <a href="./event-category/?cid=3&cat=Technology">Technology</a>
+                    <a href="event-category.php?cid=3&cat=Technology">Technology</a>
                 </div>
                 <div class="five">
                     <svg class="briefcase_svg__eds-icon--briefcase_svg" viewBox="0 0 24 24">
@@ -103,7 +103,7 @@ FROM
                     </svg>
                 </div>
                 <div class="twenty">
-                    <a href="./event-category/?cid=4&cat=Business">Business</a>
+                    <a href="event-category.php?cid=4&cat=Business">Business</a>
                 </div>
             </div>
         </div>
