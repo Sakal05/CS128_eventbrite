@@ -109,7 +109,7 @@ FROM
                 ?>
                     <div class="item">
                         <div class="pic">
-                            <img src="<?php echo ($row['Event_image']) ?>">
+                            <img src="<?php echo ($row['Event_image']) ?>" style="height: 150px;">
                             <div class="popUp">
                                 <button onclick="toggleLike(<?php echo $i ?>)">
                                     <div class="h-empty" id="h-empty-<?php echo $i ?>" style="display:<?php if ($row['Like_status'] == 0) {
