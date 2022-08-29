@@ -32,7 +32,8 @@
 
     //     echo "Connected successfully";
     // }
-
+    $e = $_GET['email'];
+    
     //Build quert SQL statement
     $sql = "SELECT * FROM event";
 
@@ -95,7 +96,7 @@
                     </svg>
                 </div>
                 <div class="twenty">
-                    <a href="../event-category.php?cid=1&cat=Music">Music</a>
+                    <a href="../event-category.php?email=<?php echo $e?>&cid=1&cat=Music">Music</a>
                 </div>
                 <div class="five">
                     <i class="eds-vector-image1 eds-icon--small eds-vector-image1--ui-orange" data-spec="icon"
@@ -108,7 +109,7 @@
                         </svg></i>
                 </div>
                 <div class="twenty">
-                    <a href="../event-category.php?cid=1&cat=Workshop">Workshop</a>
+                    <a href="../event-category.php?email=<?php echo $e?>&cid=1&cat=Workshop">Workshop</a>
                 </div>
                 <div class="five">
                     <svg id="game_svg__eds-icon--game_svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
@@ -124,7 +125,7 @@
                     </svg>
                 </div>
                 <div class="twenty">
-                    <a href="../event-category.php?cid=1&cat=Technology">Technology</a>
+                    <a href="../event-category.php?email=<?php echo $e?>&cid=1&cat=Technology">Technology</a>
                 </div>
                 <div class="five">
                     <svg class="briefcase_svg__eds-icon--briefcase_svg" viewBox="0 0 24 24">
@@ -135,7 +136,7 @@
                     </svg>
                 </div>
                 <div class="twenty">
-                    <a href="../event-category.php?cid=1&cat=Business">Business</a>
+                    <a href="../event-category.php?email=<?php echo $e?>&cid=1&cat=Business">Business</a>
                 </div>
             </div>
         </div>
@@ -169,7 +170,7 @@
                             </button>
                         </div>
                     </div>
-                    <a href="../detail/event-detail.php?id=<?php echo $row['Event_ID'] ?>">
+                    <a href="../detail/event-detail.php?email=<?php echo $e?>&id=<?php echo $row['Event_ID'] ?>">
                     <h2><?php echo $row['Event_title'] ?></h2></a>
                     <h3><span class="orangered"><?php echo date("D \, M j H:i", strtotime($row['Event_time'])); ?></span></h3>
                     <h3><span class="grey"><?php echo $row['Location'] ?></span></h3>

@@ -30,6 +30,7 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
+    $e = $_GET['email'];
     $cid = $_GET['cid'];
     $cat = $_GET['cat'];
     //Build quert SQL statement
@@ -49,7 +50,7 @@ FROM
     ?>
    
     <nav>
-        <?php include './php/header.php' ?>
+        <?php include './php/header1.php' ?>
     </nav>
     
     <div class="container">
@@ -64,7 +65,7 @@ FROM
                     </svg>
                 </div>
                 <div class="twenty">
-                    <a href="event-category.php?cid=3&cat=Music">Music</a>
+                    <a href="event-category.php?email=<?php echo $e?>&cid=3&cat=Music">Music</a>
                 </div>
                 <div class="five">
                     <i class="eds-vector-image1 eds-icon--small eds-vector-image1--ui-orange" data-spec="icon" data-testid="icon" aria-hidden="true"><svg id="travel_svg__eds-icon--travel_svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
@@ -73,7 +74,7 @@ FROM
                         </svg></i>
                 </div>
                 <div class="twenty">
-                    <a href="event-category.php?cid=4&cat=Workshop">Workshop</a>
+                    <a href="event-category.php?email=<?php echo $e?>&cid=4&cat=Workshop">Workshop</a>
                 </div>
                 <div class="five">
                     <svg id="game_svg__eds-icon--game_svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
@@ -84,7 +85,7 @@ FROM
                     </svg>
                 </div>
                 <div class="twenty">
-                    <a href="event-category.php?cid=1&cat=Technology">Technology</a>
+                    <a href="event-category.php?email=<?php echo $e?>&cid=1&cat=Technology">Technology</a>
                 </div>
                 <div class="five">
                     <svg class="briefcase_svg__eds-icon--briefcase_svg" viewBox="0 0 24 24">
@@ -93,7 +94,7 @@ FROM
                     </svg>
                 </div>
                 <div class="twenty">
-                    <a href="event-category.php?cid=2&cat=Business">Business</a>
+                    <a href="event-category.php?email=<?php echo $e?>&cid=2&cat=Business">Business</a>
                 </div>
             </div>
         </div>
@@ -135,7 +136,7 @@ FROM
                                 </button>
                             </div>
                         </div>
-                        <a href="../detail/event-detail.php?id=<?php echo $row['Event_ID'] ?>">
+                        <a href="../detail/event-detail.php?email=<?php echo $e?>&id=<?php echo $row['Event_ID'] ?>">
                             <h2><?php echo $row['Event_title'] ?></h2>
                         </a>
                         <h3><span class="orangered"><?php echo date("D \, M j H:i", strtotime($row['Event_time'])); ?></span></h3>
