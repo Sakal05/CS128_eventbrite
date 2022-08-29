@@ -3,16 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style/homepage1.css">
+    <link rel="stylesheet" href="../style/homepage2.css">
     <link rel="icon"
         href="https://cdn.evbstatic.com/s3-build/548393-rc2022-06-29_16.04-ea1b0bd/django/images/favicons/android-chrome-192x192.png">
     <title>Online Event Registration Service - Eventbrite - This event is not available</title>
     <script src="https://kit.fontawesome.com/0e1ed34929.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/signup_form.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/eae7901619.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 
 <body>
@@ -44,7 +41,7 @@
 
 ?>
     <nav>
-        <?php include './php/header.php' ?>
+        <?php include '../php/header1.php' ?>
     </nav>
     <section class="hero">
         <div class="container">
@@ -98,7 +95,7 @@
                     </svg>
                 </div>
                 <div class="twenty">
-                    <a href="./event-category/" id="show">Music</a>
+                    <a href="../event-category/">Music</a>
                 </div>
                 <div class="five">
                     <i class="eds-vector-image1 eds-icon--small eds-vector-image1--ui-orange" data-spec="icon"
@@ -111,7 +108,7 @@
                         </svg></i>
                 </div>
                 <div class="twenty">
-                    <a href="./event-category/" id="show">Workshop</a>
+                    <a href="../event-category/">Workshop</a>
                 </div>
                 <div class="five">
                     <svg id="game_svg__eds-icon--game_svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
@@ -127,7 +124,7 @@
                     </svg>
                 </div>
                 <div class="twenty">
-                    <a href="./event-category/" id="show">Technology</a>
+                    <a href="../event-category/">Technology</a>
                 </div>
                 <div class="five">
                     <svg class="briefcase_svg__eds-icon--briefcase_svg" viewBox="0 0 24 24">
@@ -138,7 +135,7 @@
                     </svg>
                 </div>
                 <div class="twenty">
-                    <a href="./event-category/" id="show">Business</a>
+                    <a href="../event-category/">Business</a>
                 </div>
             </div>
         </div>
@@ -155,15 +152,22 @@
                 <div class="item">
                     <div class="pic">
                     <img src="<?php echo ($row['Event_image']) ?>">
-                        <div class="popUp" class="show">
-                            <button class="show">
-                                <div class="h-empty">
+                        <div class="popUp">
+                            <button onclick="toggleLike(<?php echo $row['Event_ID']; ?>)">
+                                <div class="h-empty" id="h-empty-<?php echo $row['Event_ID']; ?>" style="display:<?php if ($row['Like_status']==0){echo "block;";} else { echo "none;";}?>">
                                     <svg id="heart-chunky_svg__eds-icon--user-chunky_svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve"><path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z"></path></svg>
+                                </div>
+                                <div class="h-full" id="h-full-<?php echo $row['Event_ID']; ?>" style="display:<?php if ($row['Like_status']==1){echo "block;";} else { echo "none;";}?>">
+                                    <svg id="heart-fill-svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
+                                        <path id="heart-align-svg" fill-rule="evenodd" clip-rule="evenodd" fill="red"
+                                        d="M16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.5-1.6 1.5-4.2 0-5.8C18.1 5.4 17 5 16 5">
+                                        </path>
+                                    </svg>
                                 </div>
                             </button>
                         </div>
                     </div>
-                    <a class="show">
+                    <a href=".../detail/event-detail.php?id=<?php echo $row['Event_ID'] ?>">
                     <h2><?php echo $row['Event_title'] ?></h2></a>
                     <h3><span class="orangered"><?php echo date("D \, M j H:i", strtotime($row['Event_time'])); ?></span></h3>
                     <h3><span class="grey"><?php echo $row['Location'] ?></span></h3>
@@ -178,26 +182,9 @@
         </div>
     </section>
     <footer>
-    <?php include './php/footer.php' ?>
+    <?php include '../php/footer.php' ?>
     </footer>
-    <div id="signup-form">
-        <i class="fa-solid fa-xmark" id="cross"></i>
-        <h2 id="signup-text">Please sign up to continue</h2>
-        <center>
-            <a href="./signup/"><button id="signup">Sign Up</button></a>
-        </center>
-    </div>
-    <script src="./script/heart.js"></script>
-    <script>
-        $(Document).ready(function(){
-            $("#cross").click(function(){
-                $("#signup-form").hide();
-            })
-            $(".show").click(function(){
-                $("#signup-form").show();
-            })
-        })
-    </script>
+    <script src="../script/heart.js"></script>
 </body>
 
 </html>

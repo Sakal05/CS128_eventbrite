@@ -136,7 +136,6 @@
                 </div>
             </div>
         </section>
-        
     </section>
     <footer class="footer">
         <?php
