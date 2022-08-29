@@ -154,7 +154,7 @@
             ?>
                 <div class="item">
                     <div class="pic">
-                    <img src="<?php echo ($row['Event_image']) ?>">
+                    <img src="<?php echo ($row['Event_image']) ?>" class="height-img">
                         <div class="popUp" class="show">
                             <button class="show">
                                 <div class="h-empty">
@@ -180,21 +180,23 @@
     <footer>
     <?php include './php/footer.php' ?>
     </footer>
-    <div id="signup-form">
-        <i class="fa-solid fa-xmark" id="cross"></i>
-        <h2 id="signup-text">Please sign up to continue</h2>
-        <center>
-            <a href="./signup/"><button id="signup">Sign Up</button></a>
-        </center>
+    <div class="background">
+        <div id="signup-form">
+            <i class="fa-solid fa-xmark" id="cross"></i>
+            <h2 id="signup-text">Please sign up to continue</h2>
+            <center>
+                <a href="./signup/"><button id="signup">Sign Up</button></a>
+            </center>
+        </div>
     </div>
     <script src="./script/heart.js"></script>
     <script>
         $(Document).ready(function(){
             $("#cross").click(function(){
-                $("#signup-form").hide();
+                $(".background").hide();
             })
             $(".show").click(function(){
-                $("#signup-form").show();
+                $(".background").show();
             })
         })
     </script>
