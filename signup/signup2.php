@@ -1,3 +1,40 @@
+<?php
+error_reporting(0);
+//open database
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "event_signup";
+
+// open connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+// else {
+
+//     echo "Connected successfully";
+// }
+$email = $_POST["user_email"];
+$email_confirm = $_POST["user_confirm"];
+$fullname = $_POST["fullname"];
+$password = $_POST["user_password"];
+$btn = $_POST["btn"];
+
+    // Build query
+    if ($btn == "Send") {
+        $sql = "INSERT INTO `tbl_signup`(`user_id`, `user_email`, `user_confirm`, `user_fullname`, `user_password`) 
+                VALUES (NULL, '" . $email . "','" . $email_confirm . "','" . $fullname . "','" . $password . "');";
+    //execute SQL statement
+    $conn->query($sql);
+    }
+
+    
+    echo '<script>alert("Create Successfully!")</script>';
+    header("refresh:0.5; url=../"); 
+?>
 <!DOCTYPE html>
 <html>
 
@@ -13,22 +50,7 @@
 </head>
 
 <body>
-    <?php
-    error_reporting(0);
-    //open database
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "event_signup";
-
-    // open connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-    ?>
+    
 
     <nav>
         <?php include '../php/header1.php' ?>
@@ -54,7 +76,7 @@
                     </svg>
                 </div>
                 <h1>Create<br>an account</h1>
-                <form action="./signup2.php" method="post">
+                <form >
                     <label>Email address</label>
                     <input id="login-email" type="text" name="user_email" placeholder="example@gmail.com">
                     <label>Confirm Email</label>
@@ -74,22 +96,10 @@
         </div>
         <div class="background">
         </div>
+        <div id = "alertWindow" title = "Connect Succesfully...">
     </section>
-    <?php
-    // $email = $_POST["user_email"];
-    // $email_confirm = $_POST["user_confirm"];
-    // $fullname = $_POST["fullname"];
-    // $password = $_POST["user_password"];
-    // $btn = $_POST["btn"];
-
-    // // Build query
-    // if ($btn == "Send") {
-    //     $sql = "INSERT INTO `tbl_signup`(`user_id`, `user_email`, `user_confirm`, `user_fullname`, `user_password`) 
-    //             VALUES (NULL, '" . $email . "','" . $email_confirm . "','" . $fullname . "','" . $password . "');";
-    //     //execute SQL statement
-    //     $conn->query($sql);
-    // }
-    ?>
+  
+   
     <!--Footer-->
     <footer class="footer">
         <?php
