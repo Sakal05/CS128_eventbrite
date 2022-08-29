@@ -28,17 +28,22 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    // else {
-
-    //     echo "Connected successfully";
-    // }
-
+    $cid = $_GET['cid'];
+    $cat = $_GET['cat'];
     //Build quert SQL statement
-    $sql = "SELECT * FROM event";
-
+    $sql = "SELECT
+	*
+FROM
+	Event_category
+	INNER JOIN
+	`event`
+	ON 
+		Event_category.Event_ID = `event`.Event_ID WHERE CAT_ID = $cid";
+   
+    
     //execute SQL
     $result = $conn->query($sql);
-
+   
 ?>
     <nav>
         <?php include '../php/header1.php' ?>
@@ -58,7 +63,7 @@
                     </svg>
                 </div>
                 <div class="twenty">
-                    <a href="./event-category/">Music</a>
+                    <a href="./event-category/?cid=1&cat=Music">Music</a>
                 </div>
                 <div class="five">
                     <i class="eds-vector-image1 eds-icon--small eds-vector-image1--ui-orange" data-spec="icon"
@@ -71,7 +76,7 @@
                         </svg></i>
                 </div>
                 <div class="twenty">
-                    <a href="./event-category/">Workshop</a>
+                    <a href="./event-category/?cid=2&cat=Workshop">Workshop</a>
                 </div>
                 <div class="five">
                     <svg id="game_svg__eds-icon--game_svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
@@ -87,7 +92,7 @@
                     </svg>
                 </div>
                 <div class="twenty">
-                    <a href="./event-category/">Technology</a>
+                    <a href="./event-category/?cid=3&cat=Technology">Technology</a>
                 </div>
                 <div class="five">
                     <svg class="briefcase_svg__eds-icon--briefcase_svg" viewBox="0 0 24 24">
@@ -98,7 +103,7 @@
                     </svg>
                 </div>
                 <div class="twenty">
-                    <a href="./event-category/">Business</a>
+                    <a href="./event-category/?cid=4&cat=Business">Business</a>
                 </div>
             </div>
         </div>
@@ -106,7 +111,7 @@
     <section class="events">
         <div class="container">
             <center>
-                <p class="category2">Music</p>
+                <p class="category2"><?php echo $cat ?></p>
             </center>
             <div class="events-collection" id="events-collection">
             <?php
