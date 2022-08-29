@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../style/signup.css">
     <link rel="stylesheet" href="../style/style.css">
     <link rel="icon" href="https://cdn.evbstatic.com/s3-build/548393-rc2022-06-29_16.04-ea1b0bd/django/images/favicons/android-chrome-192x192.png">
+    <script src="https://kit.fontawesome.com/eae7901619.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -19,7 +20,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "event_signup";
+    $dbname = "eventbrite_db";
 
     // open connection
     $conn = new mysqli($servername, $username, $password, $dbname);

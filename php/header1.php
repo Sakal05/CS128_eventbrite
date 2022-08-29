@@ -20,14 +20,9 @@
         </a>
         <div id="not-signedIn">
             <a href="../like/index.php">
-                like
+                Like
             </a>
-            <a href="../login/">
-                Log In
-            </a>
-            <a href="../signup/">
-                Sign Up
-            </a>
+            <i class="fa-solid fa-user"></i>
         </div>
     </div>
 </div>

@@ -216,7 +216,6 @@ $result = $conn->query($sql);
                                             </div>
                                         </span>
                                     </div>
-
                                 </div>
                             </div>
                         </article>

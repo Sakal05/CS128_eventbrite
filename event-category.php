@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../style/style.css">
     <script src="../script/homepage.js"></script>
     <script src="../script/event-category.js"></script>
+    <script src="https://kit.fontawesome.com/eae7901619.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
