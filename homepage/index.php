@@ -95,7 +95,7 @@
                     </svg>
                 </div>
                 <div class="twenty">
-                    <a href="../event-category/">Music</a>
+                    <a href="../event-category.php?cid=1&cat=Music">Music</a>
                 </div>
                 <div class="five">
                     <i class="eds-vector-image1 eds-icon--small eds-vector-image1--ui-orange" data-spec="icon"
@@ -108,7 +108,7 @@
                         </svg></i>
                 </div>
                 <div class="twenty">
-                    <a href="../event-category/">Workshop</a>
+                    <a href="../event-category.php?cid=1&cat=Workshop">Workshop</a>
                 </div>
                 <div class="five">
                     <svg id="game_svg__eds-icon--game_svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
@@ -124,7 +124,7 @@
                     </svg>
                 </div>
                 <div class="twenty">
-                    <a href="../event-category/">Technology</a>
+                    <a href="../event-category.php?cid=1&cat=Technology">Technology</a>
                 </div>
                 <div class="five">
                     <svg class="briefcase_svg__eds-icon--briefcase_svg" viewBox="0 0 24 24">
@@ -135,7 +135,7 @@
                     </svg>
                 </div>
                 <div class="twenty">
-                    <a href="../event-category/">Business</a>
+                    <a href="../event-category.php?cid=1&cat=Business">Business</a>
                 </div>
             </div>
         </div>
@@ -151,7 +151,7 @@
             ?>
                 <div class="item">
                     <div class="pic">
-                    <img src="<?php echo ($row['Event_image']) ?>">
+                    <img src="<?php echo ($row['Event_image']) ?>" style="height: 150px;">
                         <div class="popUp">
                             <button onclick="toggleLike(<?php echo $row['Event_ID']; ?>)">
                                 <div class="h-empty" id="h-empty-<?php echo $row['Event_ID']; ?>" style="display:<?php if ($row['Like_status']==0){echo "block;";} else { echo "none;";}?>">
@@ -167,7 +167,7 @@
                             </button>
                         </div>
                     </div>
-                    <a href=".../detail/event-detail.php?id=<?php echo $row['Event_ID'] ?>">
+                    <a href="../detail/event-detail.php?id=<?php echo $row['Event_ID'] ?>">
                     <h2><?php echo $row['Event_title'] ?></h2></a>
                     <h3><span class="orangered"><?php echo date("D \, M j H:i", strtotime($row['Event_time'])); ?></span></h3>
                     <h3><span class="grey"><?php echo $row['Location'] ?></span></h3>
