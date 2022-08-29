@@ -97,7 +97,7 @@
                     </svg>
                 </div>
                 <div class="twenty">
-                    <a href="./event-category/"  onclick="showPopUp()">Music</a>
+                    <a onclick="showPopUp()">Music</a>
                 </div>
                 <div class="five">
                     <i class="eds-vector-image1 eds-icon--small eds-vector-image1--ui-orange" data-spec="icon"
@@ -110,7 +110,7 @@
                         </svg></i>
                 </div>
                 <div class="twenty">
-                    <a href="./event-category/"  onclick="showPopUp()">Workshop</a>
+                    <a onclick="showPopUp()">Workshop</a>
                 </div>
                 <div class="five">
                     <svg id="game_svg__eds-icon--game_svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
@@ -126,7 +126,7 @@
                     </svg>
                 </div>
                 <div class="twenty">
-                    <a href="./event-category/" onclick="showPopUp()">Technology</a>
+                    <a onclick="showPopUp()">Technology</a>
                 </div>
                 <div class="five">
                     <svg class="briefcase_svg__eds-icon--briefcase_svg" viewBox="0 0 24 24">
@@ -137,7 +137,7 @@
                     </svg>
                 </div>
                 <div class="twenty">
-                    <a href="./event-category/" onclick="showPopUp()">Business</a>
+                    <a onclick="showPopUp()">Business</a>
                 </div>
             </div>
         </div>
@@ -184,7 +184,7 @@
             <i class="fa-solid fa-xmark" onclick="closePopUp()"></i>
             <h2 id="signup-text">Please sign up to continue</h2>
             <center>
-                <a href="./signup/"><button id="signup">Sign Up</button></a>
+                <a><button id="signup">Sign Up</button></a>
             </center>
         </div>
     </div>
