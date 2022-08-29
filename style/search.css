@@ -307,7 +307,6 @@ h3 {
 
 .share_icon_button{
     width: 30px !important; 
-
     background: none;
     border: none;
 }
@@ -340,7 +339,6 @@ i {
 .heart-empty, .heart-full{
     position: absolute;
     bottom:0;
-    margin-bottom: 7px;
     margin-left: 4px;
 
 }

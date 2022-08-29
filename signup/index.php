@@ -32,7 +32,7 @@
     ?>
     <!--Navigation-->
     <nav>
-        <?php include '../php/header1.php' ?>
+        <?php include '../php/header.php' ?>
     </nav>
     <section class="grid">
         <div class="center">
@@ -101,7 +101,7 @@
     <!--Footer-->
     <footer class="footer">
         <?php
-        include '../php/footer1.php';
+        include '../php/footer.php';
         ?>
     </footer>
 

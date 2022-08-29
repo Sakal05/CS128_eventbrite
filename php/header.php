@@ -22,10 +22,10 @@
             <a onclick="showPopUp()">
                 Like
             </a>
-            <a href="./login/">
+            <a href="./login/" onclick="closePopUp()">
                 Log In
             </a>
-            <a href="./signup/index.php">
+            <a href="./signup/index.php"onclick="closePopUp()">
                 Sign Up
             </a>
         </div>
