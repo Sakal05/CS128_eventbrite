@@ -10,7 +10,7 @@
     <link rel="icon" href="https://cdn.evbstatic.com/s3-build/548393-rc2022-06-29_16.04-ea1b0bd/django/images/favicons/android-chrome-192x192.png">
     <title>Discover event</title>
     <script src="https://kit.fontawesome.com/0e1ed34929.js" crossorigin="anonymous"></script>
-    <script src="../script/homepage.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <!--Sambo Testing 2-->
 
@@ -162,8 +162,6 @@ $result = $conn->query($sql);
                     <?php
                     $i = 0;
                     while ($row = mysqli_fetch_assoc($result)) {
-
-
                     ?>
 
 
@@ -192,7 +190,7 @@ $result = $conn->query($sql);
                             <div class="image_container_set">
                                 <div class="event_image">
                                     <a href="../detail/event-detail.php?id=<?php echo $row['Event_ID'] ?>">
-                                        <img src="<?php echo $row['Event_image']; ?>" style="width: 220px;">
+                                        <img src="<?php echo $row['Event_image']; ?>" style="width: 160px; height:100%">
                                     </a>
                                 </div>
                                 <div class="card_event_icon">
@@ -205,19 +203,18 @@ $result = $conn->query($sql);
                                         </div>
                                     </span>
                                     <div class="heart">
-                                        <span onclick="toggleLike(<?php echo $i ?>)">
-
-                                            <div class="heart-empty" id="heart-empty-<?php echo $i ?>">
+                                        <span onclick="toggleLike(<?php echo $row['Event_ID']; ?>)">
+                                            <div class="heart-empty" id="h-empty-<?php echo $row['Event_ID']; ?>" style="display:<?php if ($row['Like_status']==0){echo "block;";} else { echo "none;";}?>">
                                                 <svg id="heart-chunky_svg__eds-icon--user-chunky_svg" x="0" y="0" style="margin-top: -2px;" viewBox="0 0 24 24" xml:space="preserve">
                                                     <path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill="rgb(75, 77, 99)" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z">
                                                     </path>
                                                 </svg>
                                             </div>
-                                            <div class="heart-full" id="heart-full-<?php echo $i ?>">
-                                                <!-- <svg id="heart-fill-svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
+                                            <div class="heart-full" id="h-full-<?php echo $row['Event_ID']; ?>" style="display:<?php if ($row['Like_status']==1){echo "block;";} else { echo "none;";}?>">
+                                                <svg id="heart-fill-svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
                                                 <path id="heart-align-svg" fill-rule="evenodd" clip-rule="evenodd" fill="red" d="M16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.5-1.6 1.5-4.2 0-5.8C18.1 5.4 17 5 16 5">
                                                 </path>
-                                            </svg> -->
+                                                </svg>
                                             </div>
                                         </span>
                                     </div>
@@ -245,6 +242,7 @@ $result = $conn->query($sql);
     <footer class="footer">
         <?php include '../php/footer1.php' ?>
     </footer>
+    <script src="../script/main.js"></script>
 </body>
 
 </html>
