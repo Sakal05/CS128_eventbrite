@@ -48,7 +48,7 @@ FROM
     ?>
    
     <nav>
-        <?php include '../php/header1.php' ?>
+        <?php include './php/header.php' ?>
     </nav>
     
     <div class="container">
@@ -150,7 +150,7 @@ FROM
         </div>
     </section>
     <footer>
-        <?php include '../php/footer1.php' ?>
+        <?php include './php/footer.php' ?>
     </footer>
 
 </body>

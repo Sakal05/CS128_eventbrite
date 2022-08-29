@@ -163,8 +163,6 @@ $result = $conn->query($sql);
                     $i = 0;
                     while ($row = mysqli_fetch_assoc($result)) {
                     ?>
-
-
                         <article class="event_card_list">
                             <div class="event_card_content remove_style">
                                 <a href="../detail/event-detail.php?id=<?php echo $row['Event_ID'] ?>">
