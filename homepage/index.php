@@ -151,7 +151,7 @@
             ?>
                 <div class="item">
                     <div class="pic">
-                    <img src="<?php echo ($row['Event_image']) ?>">
+                    <img src="<?php echo ($row['Event_image']) ?>" class="height-img">
                         <div class="popUp">
                             <button onclick="toggleLike(<?php echo $row['Event_ID']; ?>)">
                                 <div class="h-empty" id="h-empty-<?php echo $row['Event_ID']; ?>" style="display:<?php if ($row['Like_status']==0){echo "block;";} else { echo "none;";}?>">
@@ -184,7 +184,7 @@
     <footer>
     <?php include '../php/footer.php' ?>
     </footer>
-    <script src="../script/heart.js"></script>
+    <script src="../script/homepage.js"></script>
 </body>
 
 </html>

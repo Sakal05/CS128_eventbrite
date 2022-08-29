@@ -21,7 +21,7 @@ error_reporting(0);
 $servername = "localhost";
 $username = "root";
 $password = "root";
-$dbname = "eventbrite";
+$dbname = "eventbrite_db";
 
 // open connection
 $conn = new mysqli($servername, $username, $password, $dbname);
