@@ -20,8 +20,8 @@ error_reporting(0);
 //open database
 $servername = "localhost";
 $username = "root";
-$password = "root";
-$dbname = "eventbrite";
+$password = "";
+$dbname = "eventbrite_db";
 
 // open connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -142,7 +142,7 @@ $result = $conn->query($sql);
                 </div>
             </div>
             <div class="centersearch">
-                <form action="filter.php" method="post">
+                <form action="./" method="post">
                     <div class="search-bar ">
                         <div class="search_bar_left h3_search_bar" style="display:flex;">
                             <i style="margin: 0; padding-left: 10px;" class="fa-solid fa-magnifying-glass"></i>
