@@ -67,7 +67,11 @@
                     
                     <button id="register-btn" name="btn" value="Send" >Create account</button>
                     
-                    <p>Already have an account? <a href="../login/">Log In</a></p>
+                    <p>Already have an account? 
+                        <a href="../login/" style="text-decoration: none; color: blue;">
+                            Log In
+                        </a>
+                    </p>
                 </form>
 
             </div>
