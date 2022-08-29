@@ -51,12 +51,9 @@
         </a>
         <div id="not-signedIn">
             <a href="../like/index.php">
-            <i class="fa-solid fa-heart fa-lg" style="padding-right: 5px;"></i>
                 Like
-            </a>
-            
             <a href="../homepage">
-            <i class="fa-solid fa-user fa-lg" style="padding-right: 5px;"></i>
+            <i class="fa-solid fa-user"></i>
                 <?php echo $email['Email']?>
             </a>
         </div>

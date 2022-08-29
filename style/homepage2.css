@@ -182,4 +182,6 @@ a{
 }
 .height-img{
     height: 160px;
+    width: auto;
+    object-fit: cover;
 }

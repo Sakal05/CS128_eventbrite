@@ -8,6 +8,7 @@
     <link rel="icon"
         href="https://cdn.evbstatic.com/s3-build/548393-rc2022-06-29_16.04-ea1b0bd/django/images/favicons/android-chrome-192x192.png">
     <title>Find ticket</title>
+    <script src="https://kit.fontawesome.com/eae7901619.js" crossorigin="anonymous"></script>
 </head>
 
 <body>

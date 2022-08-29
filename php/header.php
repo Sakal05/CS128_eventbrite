@@ -20,7 +20,7 @@
         </a>
         <div id="not-signedIn">
             <a href="./like/index.php">
-                like
+                Like
             </a>
             <a href="./login/">
                 Log In
