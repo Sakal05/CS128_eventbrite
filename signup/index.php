@@ -29,7 +29,7 @@
         die("Connection failed: " . $conn->connect_error);
     }
     ?>
-
+    <!--Navigation-->
     <nav>
         <?php include '../php/header1.php' ?>
     </nav>
@@ -53,6 +53,8 @@
                         </g>
                     </svg>
                 </div>
+
+                <!--Sign Up Form-->
                 <h1>Create<br>an account</h1>
                 <form action="./signup2.php" method="post">
                     <label>Email address</label>
@@ -73,9 +75,10 @@
                         </a>
                     </p>
                 </form>
-
+                
             </div>
         </div>
+        <!--Background-->
         <div class="background">
         </div>
     </section>
