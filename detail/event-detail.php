@@ -69,7 +69,7 @@ $row = mysqli_fetch_assoc($result)
                         <div class="event_detail_content">
                             <div class="event_detail_date">
                                 <p><?php echo date("M", strtotime($row['Event_time'])); ?></p>
-                                <p><?php echo date("j", strtotime($row['Event_date'])); ?></p>
+                                <p><?php echo date("d", strtotime($row['Event_date'])); ?></p>
                             </div>
                             <div class="event_detail_title_text">
                                 <h1 style="font-size: 20px;" class="event_detail_title_h1"><?php echo $row['Event_title'] ?></h1>
