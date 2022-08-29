@@ -59,13 +59,13 @@
                 <h1>Create<br>an account</h1>
                 <form action="./signup2.php" method="post">
                     <label>Email address</label>
-                    <input id="login-email" type="text" name="user_email" placeholder="example@gmail.com">
+                    <input id="login-email" type="text" name="email" placeholder="example@gmail.com">
                     <label>Confirm Email</label>
-                    <input id="confirm-email" type="text" name="user_confirm" placeholder="example@gmail.com">
+                    <input id="confirm-email" type="text" name="confirm-email" placeholder="example@gmail.com">
                     <label>Name</label>
-                    <input id="name" type="text" name="fullname" placeholder="Full name">
+                    <input id="name" type="text" name="name" placeholder="Full name">
                     <label>Password</label>
-                    <input id="password" name="user_password" type="text" placeholder="Password">
+                    <input id="password" name="password" type="text" placeholder="Password">
                     <p>Your password must be at least 8 characters</p>
                     
                     <button id="register-btn" name="btn" value="Send" >Create account</button>
