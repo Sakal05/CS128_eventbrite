@@ -48,11 +48,10 @@ FROM
     $result = $conn->query($sql);
 
     ?>
-   
+
     <nav>
         <?php include './php/header1.php' ?>
     </nav>
-    
     <div class="container">
         <div class="category">
             <div>
@@ -104,7 +103,7 @@ FROM
             <center>
                 <p class="category2"><?php echo $cat ?></p>
             </center>
-            <div class="events-collection" id="events-collection">
+            <div class="events-collection" id="events-collection" style="min-height: 63.5vh">
                 <?php
                 $i = 1;
                 while ($row = mysqli_fetch_assoc($result)) {
@@ -114,20 +113,12 @@ FROM
                             <img src="<?php echo ($row['Event_image']) ?>" style="height: 150px;">
                             <div class="popUp">
                                 <button onclick="toggleLike(<?php echo $i ?>)">
-                                    <div class="h-empty" id="h-empty-<?php echo $i ?>" style="display:<?php if ($row['Like_status'] == 0) {
-                                                                                                            echo "block;";
-                                                                                                        } else {
-                                                                                                            echo "none;";
-                                                                                                        } ?>">
+                                    <div class="h-empty" id="h-empty-<?php echo $i ?>" style="display:<?php if ($row['Like_status'] == 0) {echo "block;";} else {echo "none;";} ?>">
                                         <svg id="heart-chunky_svg__eds-icon--user-chunky_svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
                                             <path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z"></path>
                                         </svg>
                                     </div>
-                                    <div class="h-full" id="h-full-<?php echo $i ?>" style="display:<?php if ($row['Like_status'] == 1) {
-                                                                                                        echo "block;";
-                                                                                                    } else {
-                                                                                                        echo "none;";
-                                                                                                    } ?>">
+                                    <div class="h-full" id="h-full-<?php echo $i ?>" style="display:<?php if ($row['Like_status'] == 1) {echo "block;";} else {echo "none;";} ?>">
                                         <svg id="heart-fill-svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
                                             <path id="heart-align-svg" fill-rule="evenodd" clip-rule="evenodd" fill="red" d="M16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.5-1.6 1.5-4.2 0-5.8C18.1 5.4 17 5 16 5">
                                             </path>

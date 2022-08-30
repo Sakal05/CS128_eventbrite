@@ -48,10 +48,10 @@ $result = $conn->query($sql);
 ?>
 
 <body>
+    <nav>
+        <?php include '../php/header1.php' ?>
+    </nav>
     <div style="min-height: 90.5vh;">
-        <nav>
-            <?php include '../php/header1.php' ?>
-        </nav>
         <br>
         <div class="body_container">
             <div class="body_layout">
@@ -138,7 +138,9 @@ $result = $conn->query($sql);
 
                     <?php
                         $i++;
-                        
+                        if ($i == 3){
+                            break;
+                        }
                     }
                     ?>
                 </div>
