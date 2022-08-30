@@ -185,7 +185,7 @@
         </div>
     </section>
     <footer>
-    <?php include '../php/footer.php' ?>
+    <?php include '../php/footer1.php' ?>
     </footer>
     <script src="../script/homepage.js"></script>
 </body>
