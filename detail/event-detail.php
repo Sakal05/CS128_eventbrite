@@ -20,11 +20,11 @@ if ($conn->connect_error) {
 
 //All the parameters after ? can be accessed using $_GET array
 $id = $_GET['id'];
-
+$e = $_GET['email'];
 //Build quert SQL statement
 $description = "SELECT * from Event_des WHERE Event_ID = $id";  //sql to get description 
 $sql = "SELECT * from event WHERE Event_ID = $id"; //sqp to get event 
-$category ="SELECT * FROM Event_category WHERE Event_ID = $id";
+$category = "SELECT * FROM Event_category WHERE Event_ID = $id";
 
 //execute SQL
 $result = $conn->query($sql);
@@ -33,8 +33,7 @@ $cat = $conn->query($category);
 
 $c = mysqli_fetch_assoc($cat);
 $c_name = "";
-switch ($c['Cat_ID'])
-{
+switch ($c['Cat_ID']) {
     case 1:
         $c_name = "Technology";
         break;
@@ -128,23 +127,31 @@ $row = mysqli_fetch_assoc($result);
                                         </svg>
                                     </div>
                                 </span>
-                                
+
                                 <div class="">
-                                        <span onclick="toggleLike(<?php echo $id ?>)">
-                                            <div class="heart-empty" id="h-empty-<?php echo $id ?>" style="display:<?php if ($row['Like_status']==0){echo "block;";} else { echo "none;";}?>">
-                                                <svg id="heart-chunky_svg__eds-icon--user-chunky_svg" x="0" y="0" style="margin-top: -2px;" viewBox="0 0 24 24" xml:space="preserve">
-                                                    <path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill="rgb(75, 77, 99)" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                            <div class="heart-full" id="h-full-<?php echo $id ?>" style="display:<?php if ($row['Like_status']==1){echo "block;";} else { echo "none;";}?>">
-                                                <svg id="heart-fill-svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
-                                                    <path id="heart-align-svg" fill-rule="evenodd" clip-rule="evenodd" fill="red" d="M16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.5-1.6 1.5-4.2 0-5.8C18.1 5.4 17 5 16 5">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                        </span>
-                                    </div>
+                                    <span onclick="toggleLike(<?php echo $id ?>)">
+                                        <div class="heart-empty" id="h-empty-<?php echo $id ?>" style="display:<?php if ($row['Like_status'] == 0) {
+                                                                                                                    echo "block;";
+                                                                                                                } else {
+                                                                                                                    echo "none;";
+                                                                                                                } ?>">
+                                            <svg id="heart-chunky_svg__eds-icon--user-chunky_svg" x="0" y="0" style="margin-top: -2px;" viewBox="0 0 24 24" xml:space="preserve">
+                                                <path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill="rgb(75, 77, 99)" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <div class="heart-full" id="h-full-<?php echo $id ?>" style="display:<?php if ($row['Like_status'] == 1) {
+                                                                                                                    echo "block;";
+                                                                                                                } else {
+                                                                                                                    echo "none;";
+                                                                                                                } ?>">
+                                            <svg id="heart-fill-svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
+                                                <path id="heart-align-svg" fill-rule="evenodd" clip-rule="evenodd" fill="red" d="M16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.5-1.6 1.5-4.2 0-5.8C18.1 5.4 17 5 16 5">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </span>
+                                </div>
                             </div>
 
                             <div class="middle_side_bar">
@@ -153,9 +160,11 @@ $row = mysqli_fetch_assoc($result);
                             </div>
 
                             <div class="right_side_bar">
-                                <button class="register_button">
-                                    Register
-                                </button>
+                                <a href="../online_registration/?email=<?php echo $e?>&id=<?php echo $id?>">
+                                    <button class="register_button">
+                                        Register
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -164,16 +173,16 @@ $row = mysqli_fetch_assoc($result);
                 <section class="event_info_wrapper">
                     <div class="event_info">
                         <div class="event_info_details">
-                            
-                           
+
+
                             <div class="About_event_detail">
                                 <h2>About this event</h2>
                                 <div class="event_detail_text">
                                     <div class="event_detail_text_left event_content" style="padding-bottom: 15px;">
-                                        <h3 ><?php echo $row['Event_title'] ?></h3>
-                                        
+                                        <h3><?php echo $row['Event_title'] ?></h3>
+
                                         <p><?php echo $d['About'] ?></p>
-                                        
+
                                         <h2 style="padding: 15px 0;">Benefit</h2>
 
                                         <p><?php echo $d['Benefit'] ?></p>
@@ -188,7 +197,7 @@ $row = mysqli_fetch_assoc($result);
                                                         <?php echo $c_name ?>
                                                     </a>
                                                 </li>
-                                                
+
                                             </ul>
                                         </div>
                                     </section>
@@ -244,7 +253,7 @@ $row = mysqli_fetch_assoc($result);
                                         <time>
                                             <p><?php echo date("D, F d, Y", strtotime($row['Event_date'])); ?> </p>
                                             <p><?php echo date("H:i A e", strtotime($row['Event_time'])); ?> </p>
-                                           
+
                                         </time>
                                     </div>
                                 </div>
@@ -260,8 +269,8 @@ $row = mysqli_fetch_assoc($result);
                                     </div>
                                     <div>
                                         <div>
-                                            <p> <?php echo $row['Location']?></p>
-                                            <p><?php echo $row['Location_status']?></p>
+                                            <p> <?php echo $row['Location'] ?></p>
+                                            <p><?php echo $row['Location_status'] ?></p>
                                             <a href="#map" style="text-decoration: none; scroll-behavior: smooth;">View map</a>
                                         </div>
                                     </div>
@@ -278,8 +287,8 @@ $row = mysqli_fetch_assoc($result);
                                 <div class="map">
                                     <div>
                                         <div class="mapouter" id="map">
-                                            
-                                            <div class="gmap_canvas"><iframe class="gmap_iframe" height="100%" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=<?php echo $row['Location']?> &amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.kokagames.com/fnf-friday-night-funkin-mods/">Friday
+
+                                            <div class="gmap_canvas"><iframe class="gmap_iframe" height="100%" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=<?php echo $row['Location'] ?> &amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.kokagames.com/fnf-friday-night-funkin-mods/">Friday
                                                     Night Funkin Mods</a></div>
                                             <style>
                                                 .mapouter {
@@ -311,7 +320,7 @@ $row = mysqli_fetch_assoc($result);
                                         <span><?php echo $row['Location'] ?></span>
                                     </h2>
                                     <p style="margin: 0; padding-top: 4px; font-size: .875rem; line-height: 1.25rem; font-weight: 400;">
-                                    <?php echo $row['Location_status'] .', '. $row['Location']?>
+                                        <?php echo $row['Location_status'] . ', ' . $row['Location'] ?>
                                     </p>
                                 </div>
 

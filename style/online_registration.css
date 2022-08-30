@@ -6,24 +6,36 @@
 }
 .block {
     width:1000px;
-    height:700px;
+    height:auto;
     border:1px solid grey;
     margin:0 auto;
 }
+
+/* 2 of the big columns */
 .head{
-    width:55%;
+    
     text-align: center;
     float:left;
     padding:20px 0px 20px 0px;
     margin-left: 20px;
 }
+
+.order-summary{
+    
+    width: 40%;
+    margin-left: 20px;
+    margin-right: 15px;
+    background-color: whitesmoke;
+}
+
 .head p:nth-child(1){
-    padding:20px;
+    padding:5px 20px;
     font-size: 20px;
 }
 .head small{
     color:grey;
     font-size: 15px;
+    
 }
 .left{
     text-align: left;
@@ -32,12 +44,14 @@
 .right{
     float:right;
 }
+
 .img{
-    width:38%;
-    float:left;
+    width: auto;
+    margin: 0;
+    padding: 0;
 }
 .img img{
-    width:400px;
+    height: 250px;
 }
 .cross{
     width:2%;
@@ -48,26 +62,13 @@
     width:30px;
 }
 .sale{
-    width:60%;
-    margin-left: 20px;
-    margin-right: 20px;;
-    float:left;
+    width:80%;
+    margin: 0 15px;
 }
-.order-summary{
-    float:left;
-    width:30%;
-}
-.order-summary>div{
-    width:50%;
-    float:left;
-}
-.order-summary>div:nth-child(2){
-    padding-left: 60px;
-    margin-top: 38px;
-}
+
 #amount{
     float:right;
-    margin-top:30px;
+    margin-top:40px;
     padding:10px 20px;
 }
 #country{
@@ -75,7 +76,8 @@
     float:right;
 }
 #submit{
-    margin-top: 280px;
+    position: relative;
+    margin-top: 30px;
     padding:15px 35px;
     color:white;
     font-size: 18px;
