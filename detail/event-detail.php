@@ -262,7 +262,7 @@ $row = mysqli_fetch_assoc($result);
                                         <div>
                                             <p> <?php echo $row['Location']?></p>
                                             <p><?php echo $row['Location_status']?></p>
-                                            <a target="" href="#map" style="text-decoration: none; scroll-behavior: smooth;">View map</a>
+                                            <a href="#map" style="text-decoration: none; scroll-behavior: smooth;">View map</a>
                                         </div>
                                     </div>
                                 </div>
