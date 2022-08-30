@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./style/homepage1.css">
     <link rel="icon"
         href="https://cdn.evbstatic.com/s3-build/548393-rc2022-06-29_16.04-ea1b0bd/django/images/favicons/android-chrome-192x192.png">
-    <title>Online Event Registration Service - Eventbrite - This event is not available</title>
+    <title>Eventbrite</title>
     <script src="https://kit.fontawesome.com/0e1ed34929.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style/style.css">
