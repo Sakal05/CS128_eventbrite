@@ -48,18 +48,17 @@ $result = $conn->query($sql);
 ?>
 
 <body>
+    <nav>
+        <?php include '../php/header1.php' ?>
+    </nav>
     <div style="min-height: 90.5vh;">
-        <nav>
-            <?php include '../php/header1.php' ?>
-        </nav>
         <br>
         <div class="body_container">
             <div class="body_layout">
-                <form action="./?email=<?php echo $e?>" method="post">
+                <form action="./?email=<?php echo $e?>" method="post" class="up">
                     <div class="search-bar ">
                         <div class="search_bar_left h3_search_bar" style="display:flex;">
-                            <i style="margin: 0; padding-left: 10px;" class="fa-solid fa-magnifying-glass"></i>
-
+                            <i style="margin-top: 17px; padding-left: 10px; margin-right: 10px" class="fa-solid fa-magnifying-glass"></i>
                             <input style="padding-left: 10px; border: none; font-weight: 500" type="text" name="search" placeholder="Seach Here...">
 
                         </div>
@@ -139,7 +138,9 @@ $result = $conn->query($sql);
 
                     <?php
                         $i++;
-                        
+                        if ($i == 3){
+                            break;
+                        }
                     }
                     ?>
                 </div>
