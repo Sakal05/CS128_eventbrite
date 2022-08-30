@@ -48,65 +48,53 @@ $row = mysqli_fetch_assoc($result);
 ?>
 
 <body>
-    <div style="height: 87vh;">
-        <nav>
-            <?php include '../php/header1.php' ?>
-        </nav>
-        <div class="block">
-            <div style="display: flex; ">
-                <div style="width: 60%;">
-                    <div class="head">
-                        <p><?php echo $row['Event_title']; ?></p>
-
-                        <small><?php echo date("D, F d, Y", strtotime($row['Event_date'])) . ' ' . date("h:i A", strtotime($row['Event_time'])); ?></small>
-
-                        <div>
-                            <form method="post" action="./online_registration">
-                                <select name="quantity" id="amount" size="1">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                </select>
-                            </form>
-                            <div>
-                                <h3 class=" left">General Admission</h3>
-                                <h4 class="left"><?php echo $row['Price']; ?></h4>
-
-                                <hr size="1" color="lightgray">
-                            </div>
+    <nav>
+        <?php include '../php/header1.php' ?>
+    </nav>
+    <div class="content">
+        <div class="container1">
+            <div class="register-text">
+                <div class="center">
+                    <h2>Title</h2>
+                    <p class="grey">Time and Date</p>
+                    <div class="event-info">
+                        <div class="info">
+                            <h3><b>Title</b></h3>
+                            <h3>Price</h3>
+                            <h3 class="grey">Date</h3>
                         </div>
                         <div>
-                            <p style="font-size: 15px;">Powered by eventbrite</p>
+                            <select id="amount" size="1">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
                         </div>
+                    </div>
+                    <p>Power by <span class="orangered"><b>eventbrite</b></span></p>
+                </div>
+            </div>
+            <div class="order-summary">
+                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F259490649%2F572555648333%2F1%2Foriginal.20220403-020557?w=720&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=94c23f5b2d478a97a4c0bd28d77fa55e" alt="">
+                <div class="total">
+                    <h4>Order summary</h4>
+                    <div class="amount">
+                        <p>amount</p>
+                        <p>1</p>
+                    </div>
+                    <div class="amount">
+                        <p>price</p>
+                        <p>$___</p>
+                    </div>
+                    <div class="amount total-price">
+                        <h3>total</h3>
+                        <h3>$____</h3>
                     </div>
                 </div>
-
-                <div class="order-summary">
-                    <div class="img">
-                        <img src="<?php echo $row['Event_image']; ?>">
-                    </div>
-                    <div style="display: flex; ">
-                        <div>
-                            <h3 class="left">Order summary</h3>
-                            <p class="left">1 x <?php echo $quantity?></p>
-                            <h3 class="left">Total</h3>
-                        </div>
-                        <div>
-                            <br>
-                            <br>
-                            <p class="left">0.00$</p>
-                            <h3 class="left">0.00$</h3>
-                        </div>
-                    </div>
-                    <form style="position:relative; margin: auto; ">
-                        <input type="submit" id="submit" value="Register">
-                    </form>
-                </div>
-
             </div>
         </div>
-    </div>
+        <a class="register-button"><button class="white register">Register</button></a>
     </div>
     <footer class="footer">
         <?php include '../php/footer1.php' ?>

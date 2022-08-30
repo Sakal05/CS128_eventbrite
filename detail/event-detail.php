@@ -160,7 +160,7 @@ $row = mysqli_fetch_assoc($result);
                             </div>
 
                             <div class="right_side_bar">
-                                <a href="../online_registration/?email=<?php echo $e?>&id=<?php echo $id?>">
+                                <a href="../online_registration/?email=<?php echo $e?>&id=<?php echo $id?>" target="blank">
                                     <button class="register_button">
                                         Register
                                     </button>
