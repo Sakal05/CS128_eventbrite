@@ -45,8 +45,8 @@
         </div>
     </div>
     <div class="link">
-        <a href="../why_us/?email=<?php echo $e?>">
-            About Us
+        <a href="../account/?email=<?php echo $e?>">
+            Tickets
         </a>
         <div id="not-signedIn">
             <a href="../like/index.php?email=<?php echo $e?>">

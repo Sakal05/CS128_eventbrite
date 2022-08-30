@@ -70,12 +70,12 @@ $result = $conn->query($sql);
 
                     </div>
                 </form>
-                <div class="events_container_widght">                   
+                <div class="events_container_widght">
                      <?php
                     $i = 0;
                     while ($row = mysqli_fetch_assoc($result)) {
                     ?>
-                         <article class="event_card_list" href="event-detail-1.htm">
+                        <article class="event_card_list" href="event-detail-1.htm">
                             <div class="event_card_content remove_style">
                                 <a href="../detail/event-detail.php?id=<?php echo $row['Event_ID'] ?>">
                                     <h3>

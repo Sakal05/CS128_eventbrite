@@ -184,7 +184,7 @@
             <i class="fa-solid fa-xmark" onclick="closePopUp()"></i>
             <h2 id="signup-text">Please sign up to continue</h2>
             <center>
-                <a><button id="signup">Sign Up</button></a>
+                <a href="./signup/"><button id="signup">Sign Up</button></a>
             </center>
         </div>
     </div>

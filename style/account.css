@@ -1,0 +1,44 @@
+.container h3{
+    font-size: 1.2rem;
+}
+.container span{
+    font-weight: normal;
+}
+.block-ticket{
+    min-height: 79vh;
+}
+.event-ticket{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+.event-img img{
+    width:220px;
+    height: auto;
+}
+.event-ticket h2{
+    font-size: 1rem;
+    margin-bottom:0.5rem;
+}
+.event-ticket h3{
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+.block-ticket> div {
+    margin: 1rem 0;
+}
+.account-info h2{
+    margin: 1rem 0;
+}
+.account-info h3{
+    margin: 0.2rem 0;
+}
+.account-info{
+    padding-bottom: 1rem;
+    border-bottom: 1px solid black;
+}
+.container .orangered{
+    color: orangered;
+}
+.container .grey{
+    color: grey;
+}
