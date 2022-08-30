@@ -1,3 +1,4 @@
+
 * {
     margin:0;
     padding:0;
@@ -37,13 +38,16 @@
     font-size: 15px;
     
 }
-.left{
+
+.block .left{
+
     text-align: left;
     padding:8px;
 }
-.right{
+.block .right{
     float:right;
 }
+
 
 .img{
     width: auto;
@@ -53,31 +57,62 @@
 .img img{
     height: 250px;
 }
-.cross{
+.block .img{
+    width:38%;
+    float:left;
+}
+
+.block .cross{
     width:2%;
     float:left;
 }
-.cross svg{
+.block .cross svg{
     padding-top:15px;
     width:30px;
 }
+
 .sale{
     width:80%;
     margin: 0 15px;
 }
 
-#amount{
+
+.block .sale{
+    width:60%;
+    margin-left: 20px;
+    margin-right: 20px;;
+    float:left;
+}
+.block .order-summary{
+    float:left;
+    width:30%;
+}
+.block .order-summary>div{
+    width:50%;
+    float:left;
+}
+.block .order-summary>div:nth-child(2){
+    padding-left: 60px;
+    margin-top: 38px;
+}
+.block #amount{
+
     float:right;
     margin-top:40px;
     padding:10px 20px;
 }
-#country{
+.block #country{
     padding: 10px;
     float:right;
 }
+
 #submit{
     position: relative;
     margin-top: 30px;
+}
+.block #submit{
+    margin-top: 280px;
+
     padding:15px 35px;
     color:white;
     font-size: 18px;

@@ -16,16 +16,16 @@
     </div>
     <div class="link" onclick="showPopUp()">
         <a>
-            About Us
+            Your Ticket
         </a>
         <div id="not-signedIn">
             <a onclick="showPopUp()">
                 Like
             </a>
-            <a href="./login/" onclick="closePopUp()">
+            <a href="./login/">
                 Log In
             </a>
-            <a href="./signup/index.php"onclick="closePopUp()">
+            <a href="./signup/index.php">
                 Sign Up
             </a>
         </div>

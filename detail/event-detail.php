@@ -66,6 +66,7 @@ $row = mysqli_fetch_assoc($result);
     <script src="https://kit.fontawesome.com/0e1ed34929.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="../script/detail.js"></script>
+    <link rel="stylesheet" href="../style/online_registration.css">
 
 </head>
 
@@ -74,7 +75,6 @@ $row = mysqli_fetch_assoc($result);
         <?php include '../php/header1.php' ?>
     </nav>
     <div id="root">
-
         <div>
             <div class="bg_event_detail_img">
                 <img src="<?php echo $row['Event_image']; ?>">
@@ -338,10 +338,70 @@ $row = mysqli_fetch_assoc($result);
         <footer class="footer">
             <?php include '../php/footer1.php' ?>
         </footer>
-
-    </div>
-
-
+        <div class="block">
+            <div class="head">
+                <p>Free Career Success & Meditation Class - Phnom Penh</p>
+                <small>Tue, Jul 5, 2022 8:00 AM - 9:00 AM +07</small>
+                <select id="amount" size="1">
+                    <option>1</option>
+                    <option>2</option>
+                </select>
+                <h3 class="left">RSVP</h3>
+                <h4 class="left">Free</h4>
+                <h4 class="left">Sales end on Jul 5, 2022</h4>
+            </div>
+            <div class="img">
+                <img src="image1/1.png">
+            </div>
+            <div class="cross">
+                <svg id="cross-chunky_svg__eds-icon--cross-chunky_svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve"
+                    aria-hidden="true">
+                    <path fill="grey" id="cross-chunky_svg__eds-icon--cross-chunky_base"
+                        d="M13.4 12l3.5-3.5-1.4-1.4-3.5 3.5-3.5-3.5-1.4 1.4 3.5 3.5-3.5 3.5 1.4 1.4 3.5-3.5 3.5 3.5 1.4-1.4z">
+                    </path>
+                </svg>
+            </div>
+            <div class="sale">
+                <hr size="1" color="lightgrey"><br><br>
+                <select id="country">
+                    <option>Deutsch</option>
+                    <option>Deutsch(CH)</option>
+                    <option>English(CA)</option>
+                    <option>English(DK)</option>
+                    <option>English(FI)</option>
+                    <option>English(UK)</option>
+                    <option>English(US)</option>
+                    <option>Espanol(AR)</option>
+                    <option>Espanol(ES)</option>
+                    <option>Espanol(MX)</option>
+                    <option>Francais</option>
+                    <option>Francais(CA)</option>
+                    <option>Francais(CH)</option>
+                    <option>Italiano</option>
+                    <option>nederlands</option>
+                    <option>Portugues</option>
+                    <option>Portugues(BR)</option>
+                    <option>Svenska</option>
+                </select>
+                <p class="left">Powered by eventbrite</p>
+            </div>
+            <div class="order-summary">
+                <div>
+                    <h3 class="left">Order summary</h3>
+                    <p class="left">1 x RSVP</p>
+                    <h3 class="left">Total</h3>
+                </div>
+                <div>
+                    <p class="left">0.00$</p>
+                    <h3 class="left">0.00$</h3>
+                </div>
+            </div>
+            <a href="homepage2.html">
+                <center>
+                    <input type="submit" id="submit" value="Register">
+                </center>
+            </a>
+        </div>
     </div>
 
 </body>
