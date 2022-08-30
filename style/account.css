@@ -35,10 +35,15 @@
 .account-info{
     padding-bottom: 1rem;
     border-bottom: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
 }
 .container .orangered{
     color: orangered;
 }
 .container .grey{
     color: grey;
+}
+.account-info .user-profile img{
+    width: 160px;
 }
