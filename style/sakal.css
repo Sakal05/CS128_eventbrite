@@ -825,7 +825,7 @@ section {
 
 .event_detail_text_left {
     text-align: left;
-
+    
 }
 
 
@@ -837,9 +837,6 @@ section {
     font-size: .875rem;
 }
 
-.event_content_a a {
-    text-decoration: none;
-}
 
 .tag_heading_style {
 
@@ -958,9 +955,7 @@ section {
 
 .transportation_icon_group {
     list-style-type: none;
-
-    padding: 0 15px;
-    display: flex;
+   
 
 
 }
@@ -975,112 +970,16 @@ section {
     color: #4b4d63;
 }
 
-.icon_alignment_div {
-    padding-left: 70px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.footer_detail_page {
-    position: inherit;
-    border-top: 6px solid #4b4d63;
-    background: #1e0a3c;
-    color: #6f7287;
-}
-
-.footer_detail_page_layout {
-    margin-top: 10px;
-    max-width: 1080px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.footer_detail_content {
-    padding-bottom: 25px;
-    padding-top: 25px;
-}
-
-.footer_col1 {
-    width: 25%;
-    padding-left: 15px;
-    padding-right: 15px;
-    box-sizing: border-box;
-    display: inline-block;
-    overflow: hidden;
-    vertical-align: top;
-    font-size: .9333333333rem;
-    line-height: 1.25rem;
-    font-weight: 400;
-}
-
-.footer_text_heading_h3 {
-    color: #a9a8b3;
-    font-size: .8rem;
-    line-height: 1.25rem;
-
-}
-
-.footer_col2 {
-    width: 25%;
-    padding-left: 15px;
-    padding-right: 15px;
-    box-sizing: border-box;
-    display: inline-block;
-    overflow: hidden;
-    vertical-align: top;
-    font-size: .9333333333rem;
-    line-height: 1.25rem;
-    font-weight: 400;
-}
-
-.footer_col3 {
-    width: 25%;
-    padding-left: 15px;
-    padding-right: 15px;
-    box-sizing: border-box;
-    display: inline-block;
-    overflow: hidden;
-    vertical-align: top;
-    font-size: .9333333333rem;
-    line-height: 1.25rem;
-    font-weight: 400;
-}
-
-.footer_col4 {
-    width: 23%;
-    padding-left: 15px;
-    padding-right: 15px;
-    box-sizing: border-box;
-    display: inline-block;
-    overflow: hidden;
-    vertical-align: top;
-    font-size: .9333333333rem;
-    line-height: 1.25rem;
-    font-weight: 400;
-}
-
-.text-body-small {
-    font-size: .8rem;
-    line-height: 1.5rem;
-    text-decoration: none;
-    color: #dbdae3;
-
-}
-
-.secondary_footer {
-    align-items: center;
+.icon_alignment_div>ul {
+    display: flex;
+    vertical-align: middle;
+    align-self: center;
     align-content: center;
-    height: 28px;
-    fill: #6F7287;
-    stroke: #6F7287;
+    position: relative;
+    
 }
 
-.eventbrite_top_bar_footer {
-    margin-top: 10px;
-    align-items: center;
-    align-content: center;
-    padding-left: 40%;
-}
+
 
 /* Online registration */
 

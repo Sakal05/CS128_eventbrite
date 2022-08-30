@@ -19,15 +19,38 @@ if ($conn->connect_error) {
 // }
 
 //All the parameters after ? can be accessed using $_GET array
-
 $id = $_GET['id'];
 
 //Build quert SQL statement
-$sql = "SELECT * from EVENT WHERE Event_ID = $id";
+$description = "SELECT * from Event_des WHERE Event_ID = $id";  //sql to get description 
+$sql = "SELECT * from event WHERE Event_ID = $id"; //sqp to get event 
+$category ="SELECT * FROM Event_category WHERE Event_ID = $id";
 
 //execute SQL
 $result = $conn->query($sql);
-$row = mysqli_fetch_assoc($result)
+$des = $conn->query($description);
+$cat = $conn->query($category);
+
+$c = mysqli_fetch_assoc($cat);
+$c_name = "";
+switch ($c['Cat_ID'])
+{
+    case 1:
+        $c_name = "Technology";
+        break;
+    case 2:
+        $c_name = "Business";
+        break;
+    case 3:
+        $c_name = "Music";
+        break;
+    case 4:
+        $c_name = "Workshop";
+        break;
+}
+
+$d = mysqli_fetch_assoc($des);
+$row = mysqli_fetch_assoc($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,7 +91,7 @@ $row = mysqli_fetch_assoc($result)
                     <div class="event_detail_main_title" style="background-color: rgb(240, 240, 240);">
                         <div class="event_detail_content">
                             <div class="event_detail_date">
-                                <p><?php echo date("M", strtotime($row['Event_time'])); ?></p>
+                                <p><?php echo date("M", strtotime($row['Event_date'])); ?></p>
                                 <p><?php echo date("d", strtotime($row['Event_date'])); ?></p>
                             </div>
                             <div class="event_detail_title_text">
@@ -77,14 +100,14 @@ $row = mysqli_fetch_assoc($result)
                                     <div class="event_detail_organization_style">
                                         <div>by</div>
                                         <div>
-                                            <a class="organization_link"> <?php echo $row['Organization'] ?></a>
+                                            <a class="organization_link"> <?php echo $row['Org_name'] ?></a>
                                         </div>
                                     </div>
                                     <span class="follower_text">
                                         <div class="follower_organizer_count"><?php echo $row['Location_status'] ?></div>
                                     </span>
                                     <div class="price_status_text">
-                                        <div>Free</div>
+                                        <div><?php echo $row['Price'] ?></div>
                                     </div>
                                 </div>
                             </div>
@@ -141,104 +164,20 @@ $row = mysqli_fetch_assoc($result)
                 <section class="event_info_wrapper">
                     <div class="event_info">
                         <div class="event_info_details">
-                            <div class="organization_loy">
-                                <p style="font-size: .875rem; line-height: 1.25rem;">
-                                    <strong>Tech Career Fair focus on helping companies achieve their diversity and
-                                        inclusivity initiative with more diverse non-traditional candidates</strong>
-                                </p>
-                            </div>
+                            
+                           
                             <div class="About_event_detail">
                                 <h2>About this event</h2>
                                 <div class="event_detail_text">
-                                    <div class="event_detail_text_left event_content  event_content_a">
-                                        <h2>Tech Career Fair</h2>
-                                        <p>[IMPORTANT UPDATE!] :</p>
-                                        <p>"With COVID-19 now a global pandemic, the first thing on our minds is your
-                                            safety! We are hosting ALL of our career fairs virtually until the public
-                                            health officials and our own executive team determines it's safe enough to
-                                            resume them in person. Here is a quick rundown:</p>
-                                        <ul style="display: block;
-                                        line-height: 1.5rem;
-                                        padding-left: 2em;
-                                        color: #6f7287;">
-                                            <li>Career fair will be tentatively moved virtually/ to a later date, please
-                                                check the event description for updates or the following steps below to
-                                                get notified.</li>
-                                            <li>If you have not already created your account, do so with the&nbsp;<a style="text-decoration: none;" href="https://careerscrossroad.com/signup?code=SFTechCareerFair2022" target="_self" rel="nofollow noopener noreferrer">normal
-                                                    process</a>&nbsp;as below and you will be notified on the updates of
-                                                it.</li>
-                                        </ul>
-                                        <p>[END OF UPDATE]</p>
-                                        <p></p>
-                                        <p>We will be hosting a Tech Career Fair with our hiring partners from fast
-                                            growing startups and Fortune 500 companies in technology. &nbsp;There will
-                                            be a focus on helping companies achieve their diversity and inclusivity
-                                            initiative with more diverse candidates&nbsp;to their talent pool. Available
-                                            roles that our hiring companies are looking to fill are of the following:
-                                        </p>
-                                        <ul style="display: block;
-                                        padding-left: 2em;
-                                        color: #6f7287;
-                                        ">
-                                            <li>
-                                                <p>Software Engineering</p>
-                                            </li>
-                                            <li>
-                                                <p>Product Management</p>
-                                            </li>
-                                            <li>
-                                                <p>Data Scientist</p>
-                                            </li>
-                                            <li>
-                                                <p>AI/Machine Learning Engineer</p>
-                                            </li>
-                                            <li>
-                                                <p>Data Analyst</p>
-                                            </li>
-                                            <li>
-                                                <p>UI/UX Design</p>
-                                            </li>
-                                            <li>
-                                                <p>Marketing</p>
-                                            </li>
-                                            <li>
-                                                <p>Sales</p>
-                                            </li>
-                                        </ul>
-                                        <p>To make sure your profile is visible and accessible to hiring partners and
-                                            companies in their system please make sure you complete your profile and
-                                            upload your resume to the platform.</p>
-                                        <p></p>
-                                        <h3>Steps:</h3>
-                                        <ol>
-                                            <li>
-                                                <p>Complete the Sign-up form&nbsp;<a href="https://careerscrossroad.com/signup?code=SFTechCareerFair2022" target="_self" rel="nofollow noopener noreferrer">here&nbsp;</a>or the link
-                                                    below&nbsp;and upload your resume to the system to get your QR
-                                                    code/candidate profile link:&nbsp;<a href="https://careerscrossroad.com/signup?code=SFTechCareerFair2022" target="_self" rel="nofollow noopener noreferrer">https://careerscrossroad.com/signup?code=SFTechCareerFair2022</a>
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>Once your profile is completed and approved, await for outreach by
-                                                    hiring companies for pre-screening interview</p>
-                                            </li>
-                                            <li>
-                                                <p>Attend the career fair and check-in with your QR code/digital profile
-                                                    link at the hiring companies that you have been assigned with </p>
-                                            </li>
-                                        </ol>
-                                        <p><em>*Note: This is an invite only event due to limited space and high demand.
-                                                To increase your chance to be selected by our hiring companies and
-                                                partners to this event please make sure to follow the instructions and
-                                                submit a complete profile.&nbsp;Shortlisted candidates will be notified
-                                                for next steps </em></p>
-                                        <p></p>
-                                        <h3>Employers:</h3>
-                                        <p>To reserve your spot <a href="https://www.eventbrite.com/e/tech-career-fair-exclusive-tech-hiring-event-new-slots-available-tickets-146564621729">signup
-                                            </a>here to get your company or&nbsp;get your company on the
-                                            waitlist&nbsp;<a href="https://fastservicecom.typeform.com/to/akPkGu2k" target="_self" rel="nofollow noopener noreferrer">here&nbsp;</a>for the
-                                            next event and we will reach out to you with more info if we can slot you
-                                            in.</p>
-                                        <p></p>
+                                    <div class="event_detail_text_left event_content" style="padding-bottom: 15px;">
+                                        <h3 ><?php echo $row['Event_title'] ?></h3>
+                                        
+                                        <p><?php echo $d['About'] ?></p>
+                                        
+                                        <h2 style="padding: 15px 0;">Benefit</h2>
+
+                                        <p><?php echo $d['Benefit'] ?></p>
+
                                     </div>
                                     <section>
                                         <div class="tag_heading_style">
@@ -246,34 +185,10 @@ $row = mysqli_fetch_assoc($result)
                                             <ul style="margin: 0; padding: 0">
                                                 <li class="tag_each_element">
                                                     <a class="tag_link">
-                                                        United States Events
+                                                        <?php echo $c_name ?>
                                                     </a>
                                                 </li>
-                                                <li class="tag_each_element">
-                                                    <a class="tag_link">
-                                                        Cambodia Events
-                                                    </a>
-                                                </li>
-                                                <li class="tag_each_element">
-                                                    <a class="tag_link">
-                                                        Things to do in Phnom Penh
-                                                    </a>
-                                                </li>
-                                                <li class="tag_each_element">
-                                                    <a class="tag_link">
-                                                        Chill in Phnom Penh
-                                                    </a>
-                                                </li>
-                                                <li class="tag_each_element">
-                                                    <a class="tag_link">
-                                                        Business
-                                                    </a>
-                                                </li>
-                                                <li class="tag_each_element">
-                                                    <a class="tag_link">
-                                                        Anouncement
-                                                    </a>
-                                                </li>
+                                                
                                             </ul>
                                         </div>
                                     </section>
@@ -283,28 +198,28 @@ $row = mysqli_fetch_assoc($result)
                                             <div class="listing_social_media_icon">
                                                 <div class="listing_SC_icon_margin">
                                                     <span style="padding-left: 20px;">
-                                                        <a target="_blank" style="text-decoration: none; color: #6f7287;" href="https://www.facebook.com/Paragon-Secret-Confession-107113467533280/">
+                                                        <a target="_blank" style="text-decoration: none; color: #6f7287;" href="<?php echo $row['Org_link']; ?>">
                                                             <i style="padding-right: 20px;" class="fab fa-facebook-f"></i>
                                                         </a>
                                                     </span>
                                                     <span>
-                                                        <a target="_blank" style="text-decoration: none; color: #6f7287;" href="https://www.facebook.com/Paragon-Secret-Confession-107113467533280/">
+                                                        <a target="_blank" style="text-decoration: none; color: #6f7287;" href="<?php echo $row['Org_link']; ?>">
                                                             <i style="padding-right: 20px;" class="fa-brands fa-facebook-messenger"></i>
                                                         </a>
                                                     </span>
                                                     <span>
-                                                        <a target="_blank" style="text-decoration: none; color: #6f7287;" href="https://www.facebook.com/Paragon-Secret-Confession-107113467533280/">
+                                                        <a target="_blank" style="text-decoration: none; color: #6f7287;" href="<?php echo $row['Org_link']; ?>">
                                                             <i style="padding-right: 20px;" class="fa-brands fa-linkedin-in"></i>
                                                         </a>
                                                     </span>
                                                     <span>
-                                                        <a target="_blank" style="text-decoration: none; color: #6f7287;" href="https://www.facebook.com/Paragon-Secret-Confession-107113467533280/">
+                                                        <a target="_blank" style="text-decoration: none; color: #6f7287;" href="<?php echo $row['Org_link']; ?>">
                                                             <i style="padding-right: 20px;" class="fa-brands fa-twitter"></i>
                                                         </a>
                                                     </span>
 
                                                     <span>
-                                                        <a target="_blank" style="text-decoration: none; color: #6f7287;" href="https://www.facebook.com/Paragon-Secret-Confession-107113467533280/">
+                                                        <a target="_blank" style="text-decoration: none; color: #6f7287;" href="<?php echo $row['Org_link']; ?>">
                                                             <i style="padding-right: 20px;" class="fa-solid fa-envelope"></i>
                                                         </a>
                                                     </span>
@@ -327,8 +242,9 @@ $row = mysqli_fetch_assoc($result)
                                     </div>
                                     <div>
                                         <time>
-                                            <p>Fri, July 22, 2022</p>
-                                            <p>9:00 AM – 12:00 PM PDT</p>
+                                            <p><?php echo date("D, F d, Y", strtotime($row['Event_date'])); ?> </p>
+                                            <p><?php echo date("H:i A e", strtotime($row['Event_time'])); ?> </p>
+                                           
                                         </time>
                                     </div>
                                 </div>
@@ -344,11 +260,11 @@ $row = mysqli_fetch_assoc($result)
                                     </div>
                                     <div>
                                         <div>
-                                            <p>Moved to Virtual Event</p>
-                                            <p>Online</p>
+                                            <p> <?php echo $row['Location']?></p>
+                                            <p><?php echo $row['Location_status']?></p>
                                             <p>San Francisco, CA 94013</p>
                                             <p>United States</p>
-                                            <a target="_blank" href="https://g.page/phnom-penh-international-air-469?share" style="text-decoration: none;">View map</a>
+                                            <a target="" href="#map" style="text-decoration: none; scroll-behavior: smooth;">View map</a>
                                         </div>
                                     </div>
                                 </div>
@@ -363,8 +279,9 @@ $row = mysqli_fetch_assoc($result)
                             <div class="event_map_placeholder">
                                 <div class="map">
                                     <div>
-                                        <div class="mapouter">
-                                            <div class="gmap_canvas"><iframe class="gmap_iframe" height="100%" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Phnom Penh International Airport&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.kokagames.com/fnf-friday-night-funkin-mods/">Friday
+                                        <div class="mapouter" id="map">
+                                            
+                                            <div class="gmap_canvas"><iframe class="gmap_iframe" height="100%" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=<?php echo $row['Location']?> &amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.kokagames.com/fnf-friday-night-funkin-mods/">Friday
                                                     Night Funkin Mods</a></div>
                                             <style>
                                                 .mapouter {
@@ -391,41 +308,15 @@ $row = mysqli_fetch_assoc($result)
                             </div>
                             <div class="event_map_detail">
                                 <div class="event_map_detail_text">
-                                    <h2 style="margin: 0;" class="event_map_detail_text_h2">Tech Career Fair: Exclusive
-                                        Tech Hiring Event
+                                    <h2 style="margin: 0;" class="event_map_detail_text_h2"><?php echo $row['Event_title'] ?>
                                         <div style="color: #39364f; " class="small_text_at">at</div>
-                                        <span>Moved to Virtual Event</span>
+                                        <span><?php echo $row['Location'] ?></span>
                                     </h2>
                                     <p style="margin: 0; padding-top: 4px; font-size: .875rem; line-height: 1.25rem; font-weight: 400;">
-                                        Online, San Francisco, CA 94013
+                                    <?php echo $row['Location_status'] .', '. $row['Location']?>
                                     </p>
                                 </div>
 
-                                <div class="icon_alignment_div">
-
-                                    <ul class="transportation_icon_group">
-                                        <li>
-                                            <a target="_blank" href="https://g.page/phnom-penh-international-air-469?share" class="transportation_icon">
-                                                <i class="fa-solid fa-car"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a target="_blank" href="https://g.page/phnom-penh-international-air-469?share" class="transportation_icon">
-                                                <i class="fa-solid fa-person-walking"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a target="_blank" href="https://g.page/phnom-penh-international-air-469?share" class="transportation_icon">
-                                                <i class="fa-solid fa-bus"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a target="_blank" href="https://g.page/phnom-penh-international-air-469?share" class="transportation_icon">
-                                                <i class="fa-solid fa-bicycle"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
 
                             </div>
                         </section>

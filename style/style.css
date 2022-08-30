@@ -5,6 +5,13 @@
     box-sizing: border-box;
     font-family: Poppins, sans-serif;
 }
+
+/* scroll effect in detail page */
+html {
+    scroll-behavior: smooth;
+  }
+/* end scroll effect in detail page */
+
 .container{
     width: 1200px;
     margin-left: auto;
