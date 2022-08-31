@@ -63,7 +63,7 @@
         <div class="header-text">
             <h4>Re-open confidently with Eventbrite’s COVID-19 Safety Playbook</h4>
             <p>We partnered with risk management and health experts to empower event creators to thoughtfully consider
-                potential safety and security risks at your event. <a href="#">See the playbook.</a></p>
+                potential safety and security risks at your event.</p>
         </div>
         <br>
         <div class="popular">
