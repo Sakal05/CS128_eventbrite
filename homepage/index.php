@@ -58,30 +58,8 @@
             </div>
         </div>
     </section>
-    <br><br>
+    <br>
     <div class="container">
-        <div class="header-text">
-            <h4>Re-open confidently with Eventbrite’s COVID-19 Safety Playbook</h4>
-            <p>We partnered with risk management and health experts to empower event creators to thoughtfully consider
-                potential safety and security risks at your event.</p>
-        </div>
-        <br>
-        <div class="popular">
-            <b>Popular in</b>
-            <a href="#"><b style="color:blue"> Phnom Penh</b></a>
-        </div>
-        <div class="menu">
-            <a href="#" class="top-menu">All</a>
-            <a href="#" class="top-menu">For You</a>
-            <a href="#" class="top-menu">Online</a>
-            <a href="#" class="top-menu">Today</a>
-            <a href="#" class="top-menu">This weekend</a>
-            <a href="#" class="top-menu">4th of July</a>
-            <a href="#" class="top-menu">Free</a>
-            <a href="#" class="top-menu">Music</a>
-            <a href="#" class="top-menu">Food & Drink</a>
-            <a href="#" class="top-menu">Charity & Causes</a>
-        </div>
         <div class="category">
             <div>
                 <h2>Check out trending categories</h2>
@@ -170,7 +148,7 @@
                             </button>
                         </div>
                     </div>
-                    <a href="../detail/event-detail.php?email=<?php echo $e?>&id=<?php echo $row['Event_ID'] ?>">
+                    <a href="../detail/event-detail.php?email=<?php echo $e?>&id=<?php echo $row['Event_ID'] ?>" target="_blank">
                     <h2><?php echo $row['Event_title'] ?></h2></a>
                     <h3><span class="orangered"><?php echo date("D \, M j H:i", strtotime($row['Event_time'])); ?></span></h3>
                     <h3><span class="grey"><?php echo $row['Location'] ?></span></h3>

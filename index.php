@@ -69,22 +69,6 @@
                 potential safety and security risks at your event. <a href="#">See the playbook.</a></p>
         </div>
         <br>
-        <div class="popular">
-            <b>Popular in</b>
-            <a href="#"><b style="color:blue"> Phnom Penh</b></a>
-        </div>
-        <div class="menu">
-            <a href="#" class="top-menu">All</a>
-            <a href="#" class="top-menu">For You</a>
-            <a href="#" class="top-menu">Online</a>
-            <a href="#" class="top-menu">Today</a>
-            <a href="#" class="top-menu">This weekend</a>
-            <a href="#" class="top-menu">4th of July</a>
-            <a href="#" class="top-menu">Free</a>
-            <a href="#" class="top-menu">Music</a>
-            <a href="#" class="top-menu">Food & Drink</a>
-            <a href="#" class="top-menu">Charity & Causes</a>
-        </div>
         <div class="category">
             <div>
                 <h2>Check out trending categories</h2>
