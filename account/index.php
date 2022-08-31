@@ -72,20 +72,24 @@ $price = "";
                     $price = $eve['Price'] . "$";
                 }
             ?>
-                <a href="../detail/event-detail.php?email=<?php echo $e?>&id=<?php echo $eve['Event_ID'] ?>" style="text-decoration: none; color:Black">
-                    <div class="event-ticket" style="padding-top: 20px">
-                        <div class="event-img">
-                            <img src="<?php echo $eve['Event_image'] ?>" alt="">
-                        </div>
-                        <div>
-                            <h2><?php echo $eve['Event_title'] ?></h2>
-                            <h3 class="orangered"><?php echo date("D, M j, Y", strtotime($eve['Event_date'])) . ' ' . date("h:i A", strtotime($eve['Event_time'])) ?></h3>
-                            <h3 class="grey"><?php echo $eve['Location_status'] ?></h3>
-                            <h3 class="grey"><?php echo $eve['Quantity'] ?></h3>
-                            <h3 class="grey"><?php echo $price ?> </h3>
-                        </div>
+
+                <div class="event-ticket" style="padding-top: 20px">
+                    <div class="event-img">
+                        <a href="../detail/event-detail.php?email=<?php echo $e ?>&id=<?php echo $eve['Event_ID'] ?>">
+                            <img src="<?php echo $eve['Event_image'] ?>" alt="<?php echo $eve['Event_title'] ?>">
+                        </a>
                     </div>
-                </a>
+                    <div>
+                        <a href="../detail/event-detail.php?email=<?php echo $e ?>&id=<?php echo $eve['Event_ID'] ?>" style="text-decoration: none;">
+                            <h2><?php echo $eve['Event_title'] ?></h2>
+                        </a>
+                        <h3 class="orangered"><?php echo date("D, M j, Y", strtotime($eve['Event_date'])) . ' ' . date("h:i A", strtotime($eve['Event_time'])) ?></h3>
+                        <h3 class="grey"><?php echo $eve['Location_status'] ?></h3>
+                        <h3 class="grey"><?php echo $eve['Quantity'] ?></h3>
+                        <h3 class="grey"><?php echo $price ?> </h3>
+                    </div>
+                </div>
+
             <?php
             }
             ?>
