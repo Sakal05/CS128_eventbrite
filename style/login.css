@@ -6,7 +6,7 @@
   float:left;
 }
 .logo svg{
-  width:200px;
+  width:120px;
   fill:orangered;
 }
 .background-column img{
@@ -14,9 +14,6 @@
 }
 .form{
   padding: 130px 230px;
-}
-.submit-form{
-  padding-left: 30px;
 }
 h1{
   font-size: 50px;

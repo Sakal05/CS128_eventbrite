@@ -43,7 +43,7 @@
     $result = $conn->query($sql);
     $price = "";
     ?>
-    <div style="min-height: 90.5vh;">
+    <div style="min-height: 88.5vh;">
         <!-- header nav -->
         <nav>
             <?php include '../php/header1.php' ?>
