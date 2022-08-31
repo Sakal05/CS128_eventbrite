@@ -72,7 +72,7 @@ $price = "";
                     $price = $eve['Price'] . "$";
                 }
             ?>
-                <a href="" style="text-decoration: none; color:Black">
+                <a href="../detail/event-detail.php?email=<?php echo $e?>&id=<?php echo $eve['Event_ID'] ?>" style="text-decoration: none; color:Black">
                     <div class="event-ticket" style="padding-top: 20px">
                         <div class="event-img">
                             <img src="<?php echo $eve['Event_image'] ?>" alt="">
