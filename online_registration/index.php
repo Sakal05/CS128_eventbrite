@@ -43,7 +43,6 @@ $e = $_GET['email'];
 
 $sql = "SELECT * from event WHERE Event_ID = $id"; //sqp to get event 
 
-
 //execute SQL
 $result = $conn->query($sql);
 
@@ -99,7 +98,6 @@ if ($row['Price'] == 0) {
             document.getElementById("total").innerHTML = total + "$";
             
             document.getElementById("total1").value = price * amount;
-            
             
         });
         </script>
