@@ -101,3 +101,7 @@ $price = "";
 </body>
 
 </html>
+
+<?php
+$conn->close();
+?>

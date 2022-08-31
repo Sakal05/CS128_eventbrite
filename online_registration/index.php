@@ -127,3 +127,7 @@ if ($row['Price'] == 0) {
 </body>
 
 </html>
+
+<?php
+$conn->close();
+?>

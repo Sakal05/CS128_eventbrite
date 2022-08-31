@@ -41,4 +41,6 @@ if ($t['Event_ID'] != $id) {
 }
 
 
+$conn->close();
+
 ?>
