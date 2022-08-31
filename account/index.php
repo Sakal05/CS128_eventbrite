@@ -86,7 +86,7 @@ $price = "";
                         <h3 class="orangered"><?php echo date("D, M j, Y", strtotime($eve['Event_date'])) . ' ' . date("h:i A", strtotime($eve['Event_time'])) ?></h3>
                         <h3 class="grey"><?php echo $eve['Location_status'] ?></h3>
                         <h3 class="grey"><?php echo $eve['Quantity'] ?></h3>
-                        <h3 class="grey"><?php echo $price ?> </h3>
+                        <h3 class="grey"><?php echo $eve['Total'] ?> </h3>
                     </div>
                 </div>
 

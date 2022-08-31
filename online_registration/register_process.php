@@ -20,6 +20,7 @@ if ($conn->connect_error) {
 $id = $_GET['id'];
 $e = $_GET['email'];
 $quantity = $_POST['quantity'];
+$total = $_POST['total_post'];
 $btn = $_POST["btn"];
 
 $ticket_val = "SELECT * FROM ticket WHERE Event_ID = $id";
@@ -28,7 +29,7 @@ $t = mysqli_fetch_assoc($ticket);
 
 if ($t['Event_ID'] != $id) {
     if ($btn == "Send") {
-        $sql = "INSERT INTO `ticket`(`Ticket_ID`, `Quantity`, `Email`, `Event_ID`) VALUES (NULL, '" . $quantity . "', '" . $e . "', '" . $id . "')";
+        $sql = "INSERT INTO `ticket`(`Ticket_ID`, `Quantity`, `Email`, `Event_ID`, `Total`) VALUES (NULL, '" . $quantity . "', '" . $e . "', '" . $id . "', '" . $total . "')";
         //execute SQL statement
         $conn->query($sql);
     }

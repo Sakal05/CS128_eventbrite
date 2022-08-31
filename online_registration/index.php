@@ -87,14 +87,9 @@ if ($row['Price'] == 0) {
                         <div class="amount" style="vertical-align: center;padding-top:12px">
                             <p>Amount</p>
                             <div>
-                            <input type = "decimal" name= "total" id="amount" value="" pattern="[0,9]{1,10}" style="width: 30px;"/>
-                                <!-- <select id="amount" size="1" name="quantity">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                </select> -->
-                                <input type = "hidden" name= "h_price" id= "h_price" value = "<?php echo $row['Price'] ?>"  />
+                            <input type = "number" name= "quantity" id="amount" min="0" style="width: 40px;"/>
+            
+                            <input type = "hidden" name= "h_price" id= "h_price" value = "<?php echo $row['Price'] ?>"  />
                                 
                                 <script>
         $("#amount").change(function() {
@@ -103,12 +98,13 @@ if ($row['Price'] == 0) {
             var total = price * amount;
             document.getElementById("total").innerHTML = total + "$";
             
-            var total1 = document.getElementByID("total1");
-            total1.value =  price * amount;
+            document.getElementById("total1").value = price * amount;
+            
             
         });
         </script>
-        <input type = "hidden" name= "total" id="total1" value="" />
+        <input type = "hidden" name= "total_post" value="" id="total1"  />
+
                             </div>
                         </div>
                         <div class="amount">
