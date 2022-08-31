@@ -33,7 +33,7 @@
         <div class="links">
             <a href="../why_us/?email=<?php echo $e?>">About Us</a>
             <a href="#events-collection">Events</a>
-            <a href="#">Account</a>
+            <a href="../account/?email=<?php echo $e?>">Account</a>
             <a href="../find_your_ticket/?email=<?php echo $e?>">Find Your Ticket</a>
         </div>
         <a class="logo1" href="../homepage?email=<?php echo $e?>">
