@@ -96,7 +96,6 @@ if ($row['Price'] == 0) {
                         </div>
                         <div class="amount">
                             <p>Price</p>
-
                             <p><?php echo $price ?></p>
                         </div>
                         <div class="amount total-price">
