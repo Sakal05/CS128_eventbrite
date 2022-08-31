@@ -45,57 +45,72 @@ $sql = "SELECT * from event WHERE Event_ID = $id"; //sqp to get event
 $result = $conn->query($sql);
 
 $row = mysqli_fetch_assoc($result);
+$price = "";
+if ($row['Price'] == 0) {
+    $price = "Free";
+} else if ($row['Price'] > 0) {
+    $price = $row['Price'] . "$";
+}
 ?>
 
 <body>
     <nav>
         <?php include '../php/header1.php' ?>
     </nav>
-    <div class="content">
-        <div class="container1">
-            <div class="register-text">
-                <div class="center">
-                    <h2>Title</h2>
-                    <p class="grey">Time and Date</p>
-                    <div class="event-info">
-                        <div class="info">
-                            <h3><b>Title</b></h3>
-                            <h3>Price</h3>
-                            <h3 class="grey">Date</h3>
+    <form action="./register_process.php?email=<?php echo $e ?>&id=<?php echo $id ?>" method="post">
+        <div class="content">
+            <div class="container1">
+                <div class="register-text">
+                    <div class="center">
+                        <h2> <?php echo $row['Event_title'] ?></h2>
+                        <p class="grey"><?php echo date("D, M j, Y", strtotime($row['Event_date'])) . ' ' . date("h:i A", strtotime($row['Event_time'])) ?></p>
+                        <div class="event-info">
+                            <div class="info">
+                                <h3"><b><?php echo $row['Event_title'] ?></b></h3>
+
+                                    <h3><?php echo $price ?></h3>
+
+                                    <h3 class="grey"><?php echo date("D, M j, Y", strtotime($row['Event_date'])) ?></h3>
+                            </div>
+                            <div>
+
+                                <select id="amount" size="1" name="quantity">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+
+                            </div>
                         </div>
-                        <div>
-                            <select id="amount" size="1">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                            </select>
-                        </div>
-                    </div>
-                    <p>Power by <span class="orangered"><b>eventbrite</b></span></p>
-                </div>
-            </div>
-            <div class="order-summary">
-                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F259490649%2F572555648333%2F1%2Foriginal.20220403-020557?w=720&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=94c23f5b2d478a97a4c0bd28d77fa55e" alt="">
-                <div class="total">
-                    <h4>Order summary</h4>
-                    <div class="amount">
-                        <p>amount</p>
-                        <p>1</p>
-                    </div>
-                    <div class="amount">
-                        <p>price</p>
-                        <p>$___</p>
-                    </div>
-                    <div class="amount total-price">
-                        <h3>total</h3>
-                        <h3>$____</h3>
+                        <p>Power by <span class="orangered"><b>eventbrite</b></span></p>
                     </div>
                 </div>
+                <div class="order-summary">
+                    <img style="height: 240px;" src="<?php echo $row['Event_image'] ?>" alt="">
+                    <div class="total">
+                        <h4>Order summary</h4>
+                        <div class="amount">
+                            <p>Amount</p>
+                            <p> 1 </p>
+                        </div>
+                        <div class="amount">
+                            <p>Price</p>
+
+                            <p><?php echo $price ?></p>
+                        </div>
+                        <div class="amount total-price">
+                            <h3>Total</h3>
+                            <h3>20 $</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <a class="register-button"><button class="white register" name="btn" value="Send">Register</button></a>
+
         </div>
-        <a class="register-button"><button class="white register">Register</button></a>
-    </div>
+    </form>
     <footer class="footer">
         <?php include '../php/footer1.php' ?>
     </footer>
