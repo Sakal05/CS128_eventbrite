@@ -8,8 +8,10 @@
     <script src="https://kit.fontawesome.com/0e1ed34929.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../style/online_registration.css">
     <link rel="stylesheet" href="../style/style.css">
+    <script src="./online_registration/update_quantity.js"></script>
     <title>Online-register-form</title>
 </head>
 
@@ -72,27 +74,27 @@ if ($row['Price'] == 0) {
 
                                     <h3 class="grey"><?php echo date("D, M j, Y", strtotime($row['Event_date'])) ?></h3>
                             </div>
-                            <div>
-
-                                <select id="amount" size="1" name="quantity">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                </select>
-
-                            </div>
+                            
                         </div>
-                        <p>Power by <span class="orangered"><b>eventbrite</b></span></p>
+                        <p>Power by <span ><b style="color: orangered">eventbrite</b></span></p>
                     </div>
                 </div>
                 <div class="order-summary">
                     <img style="height: 240px;" src="<?php echo $row['Event_image'] ?>" alt="">
                     <div class="total">
                         <h4>Order summary</h4>
-                        <div class="amount">
+                        <div class="amount" style="vertical-align: center;padding-top:12px">
                             <p>Amount</p>
-                            <p> 1 </p>
+                            <div>
+
+                                <select id="amount" size="1" name="quantity" >
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                
+                            </div>
                         </div>
                         <div class="amount">
                             <p>Price</p>
