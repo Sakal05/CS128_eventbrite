@@ -24,6 +24,7 @@ $e = $_GET['email'];
 //Build quert SQL statement
 $description = "SELECT * from Event_des WHERE Event_ID = $id";  //sql to get description 
 $sql = "SELECT * from event WHERE Event_ID = $id"; //sqp to get event 
+
 $category = "SELECT * FROM Event_category WHERE Event_ID = $id";
 
 //execute SQL
@@ -74,7 +75,6 @@ if ($row['Price'] == 0) {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="../script/detail.js"></script>
     <link rel="stylesheet" href="../style/online_registration.css">
-
 </head>
 
 <body>

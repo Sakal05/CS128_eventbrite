@@ -84,19 +84,7 @@
         </div>
     </section>
     <?php
-    // $email = $_POST["user_email"];
-    // $email_confirm = $_POST["user_confirm"];
-    // $fullname = $_POST["fullname"];
-    // $password = $_POST["user_password"];
-    // $btn = $_POST["btn"];
 
-    // // Build query
-    // if ($btn == "Send") {
-    //     $sql = "INSERT INTO `tbl_signup`(`user_id`, `user_email`, `user_confirm`, `user_fullname`, `user_password`) 
-    //             VALUES (NULL, '" . $email . "','" . $email_confirm . "','" . $fullname . "','" . $password . "');";
-    //     //execute SQL statement
-    //     $conn->query($sql);
-    // }
     ?>
     <!--Footer-->
     <footer class="footer">
