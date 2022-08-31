@@ -11,7 +11,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../style/online_registration.css">
     <link rel="stylesheet" href="../style/style.css">
-    <script src="./online_registration/update_quantity.js"></script>
+
+    
     <title>Online-register-form</title>
 </head>
 
@@ -74,9 +75,9 @@ if ($row['Price'] == 0) {
 
                                     <h3 class="grey"><?php echo date("D, M j, Y", strtotime($row['Event_date'])) ?></h3>
                             </div>
-                            
+
                         </div>
-                        <p>Power by <span ><b style="color: orangered">eventbrite</b></span></p>
+                        <p>Power by <span><b style="color: orangered">eventbrite</b></span></p>
                     </div>
                 </div>
                 <div class="order-summary">
@@ -86,14 +87,28 @@ if ($row['Price'] == 0) {
                         <div class="amount" style="vertical-align: center;padding-top:12px">
                             <p>Amount</p>
                             <div>
-
-                                <select id="amount" size="1" name="quantity" >
+                            <input type = "decimal" name= "total" id="amount" value="" pattern="[0,9]{1,10}" style="width: 30px;"/>
+                                <!-- <select id="amount" size="1" name="quantity">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4">4</option>
-                                </select>
+                                </select> -->
+                                <input type = "hidden" name= "h_price" id= "h_price" value = "<?php echo $row['Price'] ?>"  />
                                 
+                                <script>
+        $("#amount").change(function() {
+            var price = $("#h_price").val();
+            var amount = $("#amount").val();
+            var total = price * amount;
+            document.getElementById("total").innerHTML = total + "$";
+            
+            var total1 = document.getElementByID("total1");
+            total1.value =  price * amount;
+            
+        });
+        </script>
+        <input type = "hidden" name= "total" id="total1" value="" />
                             </div>
                         </div>
                         <div class="amount">
@@ -103,7 +118,7 @@ if ($row['Price'] == 0) {
                         </div>
                         <div class="amount total-price">
                             <h3>Total</h3>
-                            <h3>20 $</h3>
+                            <h3 id="total">$</h3>
                         </div>
                     </div>
                 </div>
