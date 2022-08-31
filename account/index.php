@@ -32,7 +32,8 @@ $e = $_GET['email'];
 //SQL statment
 $get_account = "SELECT * FROM user WHERE Email = '$e'";
 
-$get_ticket_info = "SELECT * FROM ticket INNER JOIN `event` ON ticket.Event_ID = `event`.Event_ID WHERE Email = '$e' ";
+$get_ticket_info = "SELECT * FROM ticket 
+INNER JOIN `event` ON ticket.Event_ID = `event`.Event_ID WHERE Email = '$e' ";
 
 //Execute SQL statment
 $account = $conn->query($get_account);
@@ -72,7 +73,6 @@ $price = "";
                     $price = $eve['Price'] . "$";
                 }
             ?>
-
                 <div class="event-ticket">
                     <div class="event-img">
                         <a href="../detail/event-detail.php?email=<?php echo $e ?>&id=<?php echo $eve['Event_ID'] ?>">
@@ -89,7 +89,6 @@ $price = "";
                         <h3 class="grey"><?php echo $eve['Total'] ?> </h3>
                     </div>
                 </div>
-
             <?php
             }
             ?>

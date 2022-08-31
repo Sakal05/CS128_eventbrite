@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 }
 
 
-//All the parameters after ? can be accessed using $_GET array
+
 $id = $_GET['id'];
 $e = $_GET['email'];
 $quantity = $_POST['quantity'];
@@ -29,11 +29,12 @@ $t = mysqli_fetch_assoc($ticket);
 
 if ($t['Event_ID'] != $id) {
     if ($btn == "Send") {
-        if ($total <= 0) {
+        if ($quantity <= 0) {
             echo "<script>alert('Quantity must be greater than 0!')</script>";
             header("refresh:0.5; url=./?email=$e&id=$id ");
         } else {
-            $sql = "INSERT INTO `ticket`(`Ticket_ID`, `Quantity`, `Email`, `Event_ID`, `Total`) VALUES (NULL, '" . $quantity . "', '" . $e . "', '" . $id . "', '" . $total . "')";
+            $sql = "INSERT INTO `ticket`(`Ticket_ID`, `Quantity`, `Email`, `Event_ID`, `Total`) 
+            VALUES (NULL, '" . $quantity . "', '" . $e . "', '" . $id . "', '" . $total . "')";
             //execute SQL statement
             $conn->query($sql);
             echo '<script>alert("Register Successfully!")</script>';

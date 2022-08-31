@@ -31,16 +31,12 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-// else {
 
-//     echo "Connected successfully";
-// }
-$quantity = $_POST['quantity'];
-//All the parameters after ? can be accessed using $_GET array
+//get value from URL parameter
 $id = $_GET['id'];
 $e = $_GET['email'];
-//Build quert SQL statement
 
+//Build quert SQL statement
 $sql = "SELECT * from event WHERE Event_ID = $id"; //sqp to get event 
 
 //execute SQL
