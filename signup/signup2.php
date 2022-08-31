@@ -119,3 +119,7 @@ if ($email != $e_v['Email']) {
 </body>
 
 </html>
+
+<?php
+$conn->close();
+?>
