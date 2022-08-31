@@ -31,7 +31,7 @@ $e_v = mysqli_fetch_assoc($email_v);
 if ($email != $e_v['Email']) {
     if ($btn == "Send") {
         $sql = "INSERT INTO `user`(`User_ID`, `Username`, `Email`, `Password`) 
-        VALUES (NULL,'" . $fullname . "','" . $email . "','" . $password . "');";
+                VALUES (NULL,'" . $fullname . "','" . $email . "','" . $password . "');";
         //execute SQL statement
         $conn->query($sql);
     }
