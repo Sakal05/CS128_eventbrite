@@ -6,10 +6,12 @@
 }
 .block-ticket{
     min-height: 79vh;
+    
 }
 .event-ticket{
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    
+   
 }
 .event-img img{
     width:220px;

@@ -1,5 +1,5 @@
 .content {
-    min-height: 80.7vh;
+    min-height: 78vh;
 }
 .container1{
     display: grid;
@@ -13,9 +13,11 @@
     display: block;
 }
 .event-info{
+    
     margin: 1rem;
     display: flex;
-    align-items: center;
+    align-items:center;
+    text-align: left;
     justify-content: space-between;
     border-bottom: 1px solid grey;
     padding-bottom: 2rem;

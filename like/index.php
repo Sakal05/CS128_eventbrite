@@ -41,6 +41,7 @@
 
     //execute SQL
     $result = $conn->query($sql);
+    $price = "";
     ?>
     <div style="min-height: 90.5vh;">
         <!-- header nav -->
@@ -59,6 +60,11 @@
                 <div class="events_container_widght">
                     <?php
                     while ($row = mysqli_fetch_assoc($result)) {
+                        if ($row['Price'] == 0) {
+                            $price = "Free";
+                        } else {
+                            $price = $row['Price'] . "$";
+                        }
                     ?>
                         <article class="event_card_list" href="event-detail-1.htm">
                             <div class="event_card_content remove_style">
@@ -82,7 +88,7 @@
                                 </div>
                                 <div class="event_card_price_text">
                                     <a>
-                                        <?php echo $row['Price']; ?>
+                                        <?php echo $price; ?>
                                     </a>
                                 </div>
                             </div>
