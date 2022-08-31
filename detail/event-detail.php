@@ -167,7 +167,7 @@ if ($row['Price'] == 0) {
                             </div>
 
                             <div class="right_side_bar">
-                                <a href="../online_registration/?email=<?php echo $e?>&id=<?php echo $id?>" target="blank">
+                                <a href="../online_registration/?email=<?php echo $e?>&id=<?php echo $id?>" target="_blank">
                                     <button class="register_button">
                                         Register
                                     </button>

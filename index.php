@@ -151,7 +151,8 @@
                         </div>
                     </div>
                     <a onclick="showPopUp()">
-                    <h2><?php echo $row['Event_title'] ?></h2></a>
+                        <h2><?php echo $row['Event_title'] ?></h2>
+                    </a>
                     <h3><span class="orangered"><?php echo date("D \, M j H:i", strtotime($row['Event_time'])); ?></span></h3>
                     <h3><span class="grey"><?php echo $row['Location'] ?></span></h3>
                     <h3><span class="grey"><?php echo $row['Price'] ?></span></h3>
