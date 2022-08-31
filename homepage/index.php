@@ -123,7 +123,15 @@
                 <?php
                 $i = 1;
                 while ($row = mysqli_fetch_assoc($result)) {
+                    
+                    //change price from 0 to Free
+                    if ($row['Price'] == 0) {
+                        $price = "Free";
+                    } else {
+                        $price = $row['Price'] . "$";
+                    }
                 ?>
+                
                     <div class="item">
                         <div class="pic">
 
@@ -158,7 +166,7 @@
                     <h2><?php echo $row['Event_title'] ?></h2></a>
                     <h3><span class="orangered"><?php echo date("D \, M j H:i", strtotime($row['Event_time'])); ?></span></h3>
                     <h3><span class="grey"><?php echo $row['Location'] ?></span></h3>
-                    <h3><span class="grey"><?php echo $row['Price'] ?></span></h3>
+                    <h3><span class="grey"><?php echo $price ?></span></h3>
                     <h3><?php echo $row['Organization'] ?></h3>
                 </div>
 
