@@ -3,15 +3,16 @@
 }
 .container span{
     font-weight: normal;
+  
 }
 .block-ticket{
     min-height: 79vh;
     
 }
 .event-ticket{
-    display: grid;
+    display: flex;
+    padding-top: 20px;
     
-   
 }
 .event-img img{
     width:220px;

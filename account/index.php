@@ -47,7 +47,7 @@ $price = "";
 
 ?>
 
-<body>
+<body style="margin: auto;">
     <nav>
         <?php include '../php/header1.php' ?>
     </nav>
@@ -73,13 +73,13 @@ $price = "";
                 }
             ?>
 
-                <div class="event-ticket" style="padding-top: 20px">
+                <div class="event-ticket">
                     <div class="event-img">
                         <a href="../detail/event-detail.php?email=<?php echo $e ?>&id=<?php echo $eve['Event_ID'] ?>">
-                            <img src="<?php echo $eve['Event_image'] ?>" alt="<?php echo $eve['Event_title'] ?>">
+                            <img style="height: 120px;" src="<?php echo $eve['Event_image'] ?>" alt="<?php echo $eve['Event_title'] ?>">
                         </a>
                     </div>
-                    <div>
+                    <div style="padding-left: 15px;">
                         <a href="../detail/event-detail.php?email=<?php echo $e ?>&id=<?php echo $eve['Event_ID'] ?>" style="text-decoration: none;">
                             <h2><?php echo $eve['Event_title'] ?></h2>
                         </a>
