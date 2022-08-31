@@ -23,16 +23,26 @@ $fullname = $_POST["name"];
 $password = $_POST["password"];
 $btn = $_POST["btn"];
 
-    // Build query
-    if ($btn == "Send") {
-        $sql = "INSERT INTO `user`(`User_ID`, `Username`, `Email`, `Password`) VALUES (NULL,'".$fullname."','".$email."','".$password."');";
-    //execute SQL statement
-    $conn->query($sql);
-    }
+$email_val = "SELECT * FROM user WHERE Email = $email";
+$email_v = $conn->query($email_val);
+$e_v = mysqli_fetch_assoc($email_v);
 
-    
+// Build query
+if ($email != $e_v['Email']) {
+    if ($btn == "Send") {
+        $sql = "INSERT INTO `user`(`User_ID`, `Username`, `Email`, `Password`) VALUES (NULL,'" . $fullname . "','" . $email . "','" . $password . "');";
+        //execute SQL statement
+        $conn->query($sql);
+    }
     echo '<script>alert("Create Successfully!")</script>';
-    header("refresh:0.5; url=../homepage?email=$email "); 
+    header("refresh:0.5; url=../homepage?email=$email ");
+} else {
+    echo '<script>alert("Email has already been used to register!")</script>';
+    header("refresh:0.5; url= ./ ");
+}
+
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -49,7 +59,7 @@ $btn = $_POST["btn"];
 </head>
 
 <body>
-    
+
 
     <nav>
         <?php include '../php/header1.php' ?>
@@ -75,9 +85,9 @@ $btn = $_POST["btn"];
                     </svg>
                 </div>
                 <h1>Create<br>an account</h1>
-                <form >
+                <form>
                     <label>Email address</label>
-                    <input id="login-email" type="text"  placeholder="example@gmail.com">
+                    <input id="login-email" type="text" placeholder="example@gmail.com">
                     <label>Confirm Email</label>
                     <input id="confirm-email" type="text" placeholder="example@gmail.com">
                     <label>Name</label>
@@ -85,9 +95,9 @@ $btn = $_POST["btn"];
                     <label>Password</label>
                     <input id="password" type="text" placeholder="Password">
                     <p>Your password must be at least 8 characters</p>
-                    
-                    <button id="register-btn" name="btn" value="Send" >Create account</button>
-                    
+
+                    <button id="register-btn" name="btn" value="Send">Create account</button>
+
                     <p>Already have an account? <a href="../login/">Log In</a></p>
                 </form>
 
@@ -95,10 +105,10 @@ $btn = $_POST["btn"];
         </div>
         <div class="background">
         </div>
-        <div id = "alertWindow" title = "Connect Succesfully...">
+        <div id="alertWindow" title="Connect Succesfully...">
     </section>
-  
-   
+
+
     <!--Footer-->
     <footer class="footer">
         <?php
