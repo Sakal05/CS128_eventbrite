@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="../style/sakal.css"/>
     <link rel="stylesheet" href="../style/style.css"/>
     <script src="https://kit.fontawesome.com/0e1ed34929.js" crossorigin="anonymous"></script>
+
+    <?php $e = $_GET['email']; ?>
 </head>
 
 <body>
@@ -35,7 +37,7 @@
                 <p class="para_style">Eventbrite is the leading events management and growth platform
                     helping creators and entrepreneurs thrive</p>
                 <div class="buttom_alignment_getstarted">
-                    <a class="get_started_button">
+                    <a class="get_started_button" href="../homepage?email=<?php echo $e ?>">
                        <div class="align_button_getstarted"> Get Started Free </div>
                     </a>
                 </div>
@@ -55,15 +57,15 @@
                                 expand
                                 your reach with marketing tools using our exclusive data
                             </div>
-                            <footer class="learn_more_text">
-                                <a class="justify_content_why_footer">
+                            <div class="learn_more_text">
+                                <a class="justify_content_why_footer" href="#learn" style="text-decoration: none;">
                                     Learn more
                                 </a>
                                 <div>
                                     <i style="padding-left: 15px; padding-top: 4px;"
                                         class="fa-solid fa-angles-down"></i>
                                 </div>
-                            </footer>
+                            </div>
                         </div>
                         <div class="why-content-col2">
                             <h4 class="why_heading_h4">
@@ -75,15 +77,15 @@
                                 Stay connected to your attendees and keep them engaged with email marketing tools,
                                 notifications, and real-time insights that get results
                             </div>
-                            <footer class="learn_more_text">
-                                <a class="justify_content_why_footer">
+                            <div class="learn_more_text">
+                                <a class="justify_content_why_footer" href="#learn" style="text-decoration: none;">
                                     Learn more
                                 </a>
                                 <div>
                                     <i style="padding-left: 15px; padding-top: 4px;"
                                         class="fa-solid fa-angles-down"></i>
                                 </div>
-                            </footer>
+                            </div>
                         </div>
                         <div class="why-content-col3">
                             <h4 class="why_heading_h4">
@@ -95,22 +97,22 @@
                                 Easily post and manage your online or in-person events on a trusted platform and build a
                                 seamless attendee experience that elevates your brand
                             </div>
-                            <footer class="learn_more_text">
-                                <a class="justify_content_why_footer">
+                            <div class="learn_more_text">
+                                <a class="justify_content_why_footer" href="#learn" style="text-decoration: none;">
                                     Learn more
                                 </a>
                                 <div>
                                     <i style="padding-left: 15px; padding-top: 4px;"
                                         class="fa-solid fa-angles-down"></i>
                                 </div>
-                            </footer>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="why_eventbrite">
-                <h2 class="why_event_title_style">
+                <h2 class="why_event_title_style" id="learn">
                     Why Eventbrite?
                 </h2>
                 <p class="subhead_para">
