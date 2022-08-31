@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../style/online_registration.css">
     <link rel="stylesheet" href="../style/style.css">
 
-    
+
     <title>Online-register-form</title>
 </head>
 
@@ -86,22 +86,22 @@ if ($row['Price'] == 0) {
                         <div class="amount" style="vertical-align: center;padding-top:12px">
                             <p>Amount</p>
                             <div>
-                            <input type = "number" name= "quantity" id="amount" min="0" style="width: 40px;"/>
-            
-                            <input type = "hidden" name= "h_price" id= "h_price" value = "<?php echo $row['Price'] ?>"  />
-                                
+                                <input type="number" name="quantity" id="amount" min="0" style="width: 40px;" />
+
+                                <input type="hidden" name="h_price" id="h_price" value="<?php echo $row['Price'] ?>" />
+
                                 <script>
-        $("#amount").change(function() {
-            var price = $("#h_price").val();
-            var amount = $("#amount").val();
-            var total = price * amount;
-            document.getElementById("total").innerHTML = total + "$";
-            
-            document.getElementById("total1").value = price * amount;
-            
-        });
-        </script>
-        <input type = "hidden" name= "total_post" value="" id="total1"  />
+                                    $("#amount").change(function() {
+                                        var price = $("#h_price").val();
+                                        var amount = $("#amount").val();
+                                        var total = price * amount;
+                                        document.getElementById("total").innerHTML = total + "$";
+
+                                        document.getElementById("total1").value = price * amount;
+
+                                    });
+                                </script>
+                                <input type="hidden" name="total_post" value="" id="total1" />
 
                             </div>
                         </div>

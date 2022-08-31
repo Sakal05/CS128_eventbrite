@@ -29,12 +29,17 @@ $t = mysqli_fetch_assoc($ticket);
 
 if ($t['Event_ID'] != $id) {
     if ($btn == "Send") {
-        $sql = "INSERT INTO `ticket`(`Ticket_ID`, `Quantity`, `Email`, `Event_ID`, `Total`) VALUES (NULL, '" . $quantity . "', '" . $e . "', '" . $id . "', '" . $total . "')";
-        //execute SQL statement
-        $conn->query($sql);
+        if ($total <= 0) {
+            echo "<script>alert('Quantity must be greater than 0!')</script>";
+            header("refresh:0.5; url=./?email=$e&id=$id ");
+        } else {
+            $sql = "INSERT INTO `ticket`(`Ticket_ID`, `Quantity`, `Email`, `Event_ID`, `Total`) VALUES (NULL, '" . $quantity . "', '" . $e . "', '" . $id . "', '" . $total . "')";
+            //execute SQL statement
+            $conn->query($sql);
+            echo '<script>alert("Register Successfully!")</script>';
+            header("refresh:0.5; url=../account?email=$e ");
+        }
     }
-    echo '<script>alert("Register Successfully!")</script>';
-    header("refresh:0.5; url=../account?email=$e ");
 } else {
     echo '<script>alert("Event has already been registered")</script>';
     header("refresh:0.5; url=../account?email=$e ");
