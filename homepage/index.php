@@ -81,7 +81,7 @@
                     </svg>
                 </div>
                 <div class="twenty">
-                    <a href="../event-category.php?email=<?php echo $e ?>&cid=1&cat=Music">Music</a>
+                    <a href="../event-category.php?email=<?php echo $e ?>&cid=3&cat=Music">Music</a>
                 </div>
                 <div class="five">
                     <i class="eds-vector-image1 eds-icon--small eds-vector-image1--ui-orange" data-spec="icon" data-testid="icon" aria-hidden="true"><svg id="travel_svg__eds-icon--travel_svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
@@ -90,7 +90,7 @@
                         </svg></i>
                 </div>
                 <div class="twenty">
-                    <a href="../event-category.php?email=<?php echo $e ?>&cid=1&cat=Workshop">Workshop</a>
+                    <a href="../event-category.php?email=<?php echo $e ?>&cid=4&cat=Workshop">Workshop</a>
                 </div>
                 <div class="five">
                     <svg id="game_svg__eds-icon--game_svg" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve">
@@ -110,7 +110,7 @@
                     </svg>
                 </div>
                 <div class="twenty">
-                    <a href="../event-category.php?email=<?php echo $e ?>&cid=1&cat=Business">Business</a>
+                    <a href="../event-category.php?email=<?php echo $e ?>&cid=2&cat=Business">Business</a>
                 </div>
             </div>
         </div>
